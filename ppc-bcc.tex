@@ -1,78 +1,62 @@
-\documentclass{article}
+
+\documentclass[a4paper]{article}
+
+% Para usar vários arquivos com cabeçalho
+\usepackage{standalone}
+
+% Pacotes de formatação das fontes
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{fontspec}
-\usepackage{float}
-\usepackage{longtable}
-\usepackage{tikz}
-\usetikzlibrary{shapes,snakes,positioning,calc}
-\usepackage{amsmath,amssymb}
-\usepackage{makecell}
-
 \setmainfont[
-    BoldItalicFont=calibri-bold-italic-2.ttf,
-    BoldFont      =calibri-bold-2.ttf,
-    ItalicFont    =calibri-italic.ttf]{calibri-7.ttf}
+    Path=fonts/,
+    BoldItalicFont=*-bold-italic-2.ttf,
+    BoldFont      =*-bold-2.ttf,
+    ItalicFont    =*-italic.ttf]{calibri.ttf}
 
-\usepackage{xcolor}
-\usepackage{sectsty}
-%\sectionfont{\color{blue}}
-\sectionfont{\MakeUppercase}
-%\subsectionfont{\color{blue}} 
-\subsectionfont{\MakeUppercase} 
-\usepackage{geometry}
- \geometry{
- a4paper,
-% total={170mm,257mm},
- left=30mm,
- right=30mm,
- top=25mm,
- bottom=25mm,
- }
-\usepackage{hyperref}
-\hypersetup{colorlinks=true,
-linkcolor=black,
-urlcolor=blue}
-\urlstyle{same}
 
-\usepackage{footmisc}
-
-\usepackage{sectsty}
-\usepackage{titlesec}
-
+% Pacote para gerenciamento de espaçamentos
+\usepackage[left=30mm,right=30mm,top=25mm,bottom=25mm]{geometry}
 \usepackage{indentfirst}
-\usepackage{hyperref}
 \setlength{\parindent}{.5cm}
 \setlength{\parskip}{1em}
 \renewcommand{\baselinestretch}{1.5}
 
-\usepackage{natbib}
-\usepackage{graphicx}
+% Outros pacotes
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage{multirow}
-\usepackage{tocloft}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{pdflscape}
 
-\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
 
-\setlength\parindent{0pt}
+% Gerenciamento dos hyperlinks
+\definecolor{dark-red}{HTML}{ab0000}
+\definecolor{dark-green}{HTML}{00781c}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=dark-green,
+  citecolor=dark-green,
+  urlcolor=dark-green,
+  pdfsubject={Projeto Pedagógico BCC},
+  pdftitle={Projeto Pedagógico BCC}
+}
+\urlstyle{same}
 
-%\newcommand{\disciplina}[6][yellow!20]{
-%\node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner sep=03pt, %inner ysep=3pt, text width=#5pt, minimum height=40pt, text centered, align=left] (#4) at (#2,#3) {
-
-%   \begin{minipage}{#5pt}
-%   \linespread{1.0}\selectfont
-%       \centering
-%       \scriptsize{#6}
-%   \end{minipage}
-%};
-%}
-
-\newcommand\T{\rule{0pt}{5.6ex}}       % Top strut
-\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
-
+% Gerenciamento de figuras
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes,positioning,calc}
 \newcommand{\disciplina}[6][yellow!20]{
-\node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner sep=03pt, inner ysep=3pt, text width=\the\numexpr #5-6pt, minimum height=40pt, text centered, anchor=west] (#4) at (#2,#3) {
-
-   \begin{minipage}{\the\numexpr #5-6pt}
+\node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
+sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=40pt,
+text centered, anchor=west] (#4) at (#2,#3) {
+   \begin{minipage}{#5pt}
    \linespread{1.0}\selectfont
        \centering
        \scriptsize{#6}
@@ -80,64 +64,89 @@ urlcolor=blue}
 };
 }
 
+% Espaçamentos nas listas
+\setlist[itemize]{noitemsep,topsep=0pt}
+\setlist[enumerate]{noitemsep,topsep=0pt}
+
+% Paleta de cores daltônico-friendly
+\definecolor{nred}{rgb}{0.88, 0.28, 0.33}
+\definecolor{nblue}{rgb}{0.34, 0.74, 0.96}
+\definecolor{nyellow}{rgb}{0.8, 0.86, 0.38}
+\definecolor{npurple}{rgb}{0.25, 0.34, 0.93}
+\definecolor{ngreen}{rgb}{0.45, 0.95, 0.66}
+
+
+% Outros
+\usepackage{sectsty}
+\sectionfont{\MakeUppercase}
+\subsectionfont{\MakeUppercase} 
+
+\usepackage{tocloft}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+
+\newcommand\T{\rule{0pt}{5.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+
+
 
 \begin{document}
+
+
 \begin{tabular}{rp{.5\textwidth}r}
- \multirow{2}{*}{\includegraphics[scale=.03]{imagens/brasao.png}} & \centering \Large{Ministério da Educação} & \multirow{2}{*}{\includegraphics[scale=2.3]{imagens/ufabc-logo.png}}\\
-     & \centering \Large{Universidade Federal do ABC} &\\
+    \multirow{2}{*}{\includegraphics[scale=.03]{imagens/brasao.png}} & 
+    \centering \Large{Ministério da Educação} & \multirow{2}{*}{\includegraphics[scale=2.3]{imagens/ufabc-logo.png}} \\
+    & \centering \Large{Universidade Federal do ABC} &\\
 \end{tabular}
 
 \vspace{9cm}
 
 \begin{center}
-\Large{PROJETO PEDAGÓGICO DO CURSO DE \\\textbf {BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}}
+    \Large{PROJETO PEDAGÓGICO DO CURSO DE \\\textbf {BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}}
 \end{center}
 
 \vspace{9cm}
 
 \begin{center}
-    SANTO ANDRÉ \\ 2021
+    SANTO ANDRÉ \\ 2023
 \end{center}
 
 \newpage
 
 \begin{tabular}{l}
-\textbf{Reitor da UFABC}\\
-Prof. Dr. Dácio Roberto Matheus\\
-\\
-\textbf{Pró-Reitora de Graduação}\\
-Profa. Dra. Fernanda Graziella Cardoso\\
-\\
-\textbf{Diretora do Centro de Matemática, Computação e Cognição}\\
-Profa. Dra. Tatiana Lima Ferreira\\
-\\
-\textbf{Coordenação do Curso de Bacharelado em Ciência da Computação}\\
-Prof. Dr. Jerônimo Cordoni Pellegrini - Coordenador\\
-Prof. Dr. Gustavo Sousa Pavani - Vice-coordenador\\
-\\
-\textbf{Equipe de Trabalho}\\
-Prof. Dr. Alexandre Donizeti Alves\\
-Prof. Dr. Aritanan Borges Garcia Gruber\\
-Profa. Dra. Carla Lopes Rodriguez\\
-Profa. Dra. Carla Negri Lintzmayer\\
-Prof. Dr. Carlos da Silva dos Santos\\
-Prof. Dr. Denis Gustavo Fantinato\\
-Profa. Dra. Denise Hideko Goya\\
-Prof. Dr. Emílio de Camargo Francesquini\\
-Prof. Dr. Francisco de Assis Zampirolli\\
-Prof. Dr. Fabricio Olivetti de França\\
-Prof. Dr. Gustavo Sousa Pavani\\
-Prof. Dr. Jerônimo Cordoni Pellegrini\\
-Prof. Dr. João Marcelo Borovina Josko\\
-Prof. Dr. Marcio Katsumi Oikawa\\
-Prof. Dr. Maycon Sambinelli\\
-Prof. Dr. Paulo Roberto Miranda Meirelles\\
-Prof. Dr. Thiago Ferreira Covões\\
-Prof. Dr. Vladimir Emiliano Moreira Rocha\\
-
-
-
-
+    \textbf{Reitor da UFABC}\\
+    Prof.\ Dr.\ Dácio Roberto Matheus\\
+    \\
+    \textbf{Pró-Reitoria de Graduação}\\
+    Profa.\ Dra.\ Fernanda Graziella Cardoso -- Pró-reitora\\
+    Prof.\ Dr.\ Marcelo Salvador Caetano -- Pró-reitor adjunto\\
+    \\
+    \textbf{Diretoria do Centro de Matemática, Computação e Cognição}\\
+    Profa.\ Dra.\ Tatiana Lima Ferreira -- Diretora\\
+    Prof.\ Dr.\ Maurício Richartz -- Vice-diretor\\
+    \\
+    \textbf{Coordenação do Curso de Bacharelado em Ciência da Computação}\\
+    Prof.\ Dr.\ Jerônimo Cordoni Pellegrini -- Coordenador\\
+    Prof.\ Dr.\ Gustavo Sousa Pavani -- Vice-coordenador\\
+    \\
+    \textbf{Equipe de Trabalho}\\
+    Prof.\ Dr.\ Alexandre Donizeti Alves\\
+    Prof.\ Dr.\ Aritanan Borges Garcia Gruber\\
+    Profa.\ Dra.\ Carla Lopes Rodriguez\\
+    Profa.\ Dra.\ Carla Negri Lintzmayer\\
+    Prof.\ Dr.\ Carlos da Silva dos Santos\\
+    %Prof.\ Dr.\ Denis Gustavo Fantinato\\
+    Profa.\ Dra.\ Denise Hideko Goya\\
+    Prof.\ Dr.\ Emílio de Camargo Francesquini\\
+    Prof.\ Dr.\ Francisco de Assis Zampirolli\\
+    Prof.\ Dr.\ Fabrício Olivetti de França\\
+    Prof.\ Dr.\ Gustavo Sousa Pavani\\
+    Prof.\ Dr.\ Jerônimo Cordoni Pellegrini\\
+    Prof.\ Dr.\ João Marcelo Borovina Josko\\
+    Prof.\ Dr.\ Marcio Katsumi Oikawa\\
+    Prof.\ Dr.\ Maycon Sambinelli\\
+    %Prof.\ Dr.\ Paulo Roberto Miranda Meirelles\\
+    %Prof.\ Dr.\ Thiago Ferreira Covões\\
+    Prof.\ Dr.\ Vladimir Emiliano Moreira Rocha\\
 \end{tabular}
 
 
@@ -198,7 +207,7 @@ Prof. Dr. Vladimir Emiliano Moreira Rocha\\
 \input{capitulos/17-disciplinas}
 
 \newpage
-\input{capitulos/18-anexos}ŝ
+\input{capitulos/18-anexos}
 
 \end{document}
 
