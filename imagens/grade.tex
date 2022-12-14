@@ -4,17 +4,26 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes,snakes,positioning,calc}
 
-\newcommand{\disciplina}[6][nyellow]{
+\newcommand{\disciplina}[6][yellow!20]{
 \node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
-sep=03pt, inner ysep=3pt, text width=\the\numexpr #5-6pt, minimum height=40pt,
+sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=40pt,
 text centered, anchor=west] (#4) at (#2,#3) {
-   \begin{minipage}{\the\numexpr #5-6pt}
+   \begin{minipage}{#5pt}
    \linespread{1.0}\selectfont
        \centering
        \scriptsize{#6}
    \end{minipage}
 };
 }
+
+
+\usepackage{xcolor}
+\definecolor{nred}{rgb}{0.88, 0.28, 0.33}
+\definecolor{nblue}{rgb}{0.34, 0.74, 0.96}
+\definecolor{nyellow}{rgb}{0.8, 0.86, 0.38}
+\definecolor{npurple}{rgb}{0.25, 0.34, 0.93}
+\definecolor{ngreen}{rgb}{0.45, 0.95, 0.66}
+
 
 \begin{document}
 
@@ -185,7 +194,7 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [nblue]{4*\sz}{-400pt}{a}{\quatc}{Modelagem de Banco de Dados\\(4-0-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-400pt}{a}{\quatc}{Computação Gráfica\\(3-1-0-4)}
+    \disciplina [nblue]{8*\sz}{-400pt}{a}{\quatc}{Computação Gráfica\\(0-4-0-4)}
     
     \disciplina [nblue]{12*\sz}{-400pt}{a}{\quatc}{Otimização Linear\\(4-0-0-4)}
     

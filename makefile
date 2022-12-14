@@ -11,6 +11,7 @@ build_dir:
 
 define compile_tex
 	$(LXC) $(1).tex
+	$(LXC) $(1).tex
 	cp $(BUILD_DIR)/$(1).pdf .
 endef
 
