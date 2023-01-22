@@ -1,0 +1,79 @@
+\documentclass[class=article, crop=false]{standalone}
+
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTA002.bib}
+\addbibresource{MCTA002-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA002-23 -- Algoritmos e Estruturas de Dados II}
+\label{disc:aedII}
+
+(\textbf{\textit{Algorithms and Data Structures II}})
+
+\begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \textbf{T-P-E-I:} 4-0-0-6
+        
+        \textbf{Carga horária:} 48 horas
+        
+        \textbf{Quadrimestre:} 7º
+        
+        \textbf{Recomendações:} 
+        \hyperref[disc:aedI]{Algoritmos e Estruturas de Dados I},
+        \hyperref[disc:pe]{Programação Estruturada},
+        Processamento da Informação.
+    \end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Dar continuidade ao estudo sobre algoritmos e estruturas de dados elementares
+iniciado no curso de Algoritmos e Estruturas de Dados I, apresentando novas 
+estruturas de dados (Tabela de Símbolos, Tabela Hash, Árvore B e Tries), os 
+algoritmos básicos para suas manipulações, bem como suas aplicações. 
+Apresentar algoritmos para processamento de textos e compressão de dados. 
+Discutir, sem a necessidade de muito rigor formal, os tempos de execução dos 
+algoritmos estudados.
+Apresentar algoritmos de ordenação que não usam comparação.
+Apresentar técnicas de projeto de algoritmos por enumeração e backtracking.
+Dar continuidade na discussão iniciada no curso de Algoritmos e Estruturas 
+de Dados I sobre a importância da escolha adequada das estruturas de dados e
+algoritmos para a resolução de problemas de maneira eficiente.
+
+Ao concluir esse curso, espera-se que o discente: compreenda o funcionamento
+das estruturas de dados e algoritmos apresentados ao longo do curso; que ele
+tenha noções dos custos computacionais envolvidos em tais operações e que tenha
+demonstrado capacidade de implementar tais algoritmos e estruturas de dados em
+uma linguagem de programação de alto nível.
+
+\textbf{Conteúdo programático:}
+Cota inferior de ordenação por comparação e algoritmos de ordenação sem comparação.
+Tabelas de símbolos e tabelas hash.
+Árvores B.
+Árvores de busca digital: tries e/ou Patricia tries.
+Processamento de cadeias: algoritmo KMP e/ou Boyer-Moore.
+Compressão de dados: algoritmo de Huffman.
+Enumeração e backtracking.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{Lower bound for comparison sorting and non-comparison sorting algorithms.
+Symbol tables and hash tables.
+B trees.
+Digital search trees: tries and/or Patricia tries.
+String processing: KMP and/or Boyer-Moore algorithm.
+Data compression: Huffman algorithm.
+Enumeration and backtracking.}
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{1998-sedgewick, 2012-cormen-etal, 2010-szwarcfiter-markenzon}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{2007-ziviani, 1995-tenenbaum-etal, 2011-sedgewick-wayne, 2002-cormen-etal}
+\printbibliography
+
+\end{document}

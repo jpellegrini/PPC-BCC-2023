@@ -1,0 +1,94 @@
+\documentclass[class=article, crop=false]{standalone}
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTA015.bib}
+\addbibresource{MCTA015-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA015-23 -- Linguagens Formais e Autômatos}
+\label{disc:lfa}
+
+(\textbf{\textit{Automata and Formal Languages}})
+
+\begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \textbf{T-P-E-I:} 4-0-0-4
+        
+        \textbf{Carga horária:} 48 horas
+        
+        \textbf{Quadrimestre:} 12º 
+        
+        \textbf{Recomendações:} 
+        \hyperref[disc:mdII]{Matemática Discreta II},
+        \hyperref[disc:mdI]{Matemática Discreta I},
+        Funções de Uma Variável,
+        \hyperref[disc:aaII]{Análise de Algoritmos II},
+        \hyperref[disc:aaI]{Análise de Algoritmos I},
+        \hyperref[disc:ag]{Algoritmos em Grafos},
+        \hyperref[disc:aedII]{Algoritmos e Estruturas de Dados II},
+        \hyperref[disc:aedI]{Algoritmos e Estruturas de Dados I},
+        \hyperref[disc:pe]{Programação Estruturada},
+        Processamento da Informação.
+    \end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Compreender os modelos computacionais uniformes clássicos (centrados em
+autômatos e gramáticas) via exploração das respectivas capacidades e limitações
+através de demonstrações dos resultados pivotais. 
+Entender os conceitos de complexidade/intratabilidade e
+computabilidade/indecidibilidade, sendo capaz de definir e argumentar
+corretamente sobre eles e as situações/problemas aos quais são aplicáveis.
+
+\textbf{Conteúdo programático:}
+Problemas e linguagens.
+Modelos computacionais uniformes clássicos e a hierarquia de Chomsky-Turing. 
+Linguagens regulares: autômatos finitos determinísticos e não determinísticos,
+expressões regulares e o teorema de Kleene; lemas de iteração regulares. 
+Linguagens livres de contexto: autômatos com pilha e gramáticas livres de
+contexto determinísticos e não determinísticos; formas gramaticais normais de
+Chomsky e Greibach; lema de iteração livre de contexto. 
+Linguagens recursivamente enumeráveis e recursivas: máquinas de Turing
+determinísticas e não determinísticas; máquinas universais, diagonalização,
+indecidibilidade e linguagens não recursivamente enumeráveis; reduções de
+Turing e máquinas com oráculos; tese de Church-Turing.
+Decidibilidade em tempo polinomial: cômputo versus verificação e as classes de
+complexidade $\mathsf{P}$, $\mathsf{NP}$ e $\mathsf{coNP}$ de linguagens;
+intratabilidade e o problema $\mathsf{P}\stackrel{?}{=}\mathsf{NP}$; reduções
+em tempo polinomial, elementos do teorema de Cook-Levin, linguagens
+$\mathsf{NP}$-completas e $\mathsf{NP}$-difíceis.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{
+Problems and languages.
+Classic uniform computational models and the Chomsky-Turing's hierarchy.
+Regular languages: deterministic and non-deterministic finite automata, regular
+expressions, and Kleene's theorem; regular pumping lemmas.
+Context-free languages: deterministic and non-deterministic pushdown automata
+and context-free grammars; Chomsky's and Greibach's normal forms; context-free
+pumping lemma.
+Recursively enumerable and recursive languages: deterministic and
+non-deterministic Turing machines; universal machines, diagonalization,
+undecidability, and non-recursively enumerable languages; Turing reductions and
+oracle machines; Church-Turing's thesis.
+Bounded decidability: computing versus verifying solutions in polynomial time
+and the $\mathsf{P}$, $\mathsf{NP}$, and $\mathsf{coNP}$ (complexity) classes
+of polynomial time decidable languages; intractability and the
+$\mathsf{P}\stackrel{?}{=}\mathsf{NP}$ problem; polynomial time reductions,
+elements of the Cook-Levin's theorem, $\mathsf{NP}$-complete and
+$\mathsf{NP}$-hard languages.
+}
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{2013-sipser,1998-lewis-papadimitriou,2006-hopcroft-etal}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{2006-anderson,2019-crespi-reghizzi-etal,2010-goldreich,1997-kozen,2008-shallit} 
+\printbibliography
+
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[class=article, crop=false]{standalone}
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTA025.bib}
+\addbibresource{MCTA025-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA025-23 -- Sistemas Distribuídos}
+\label{disc:sist_distr}
+
+(\textbf{\textit{Distributed Systems}})
+
+\begin{center}
+\begin{minipage}{0.85\textwidth}
+    \textbf{T-P-E-I:} 3-1-0-4
+    
+    \textbf{Carga horária:} 48 horas
+    
+    \textbf{Quadrimestre:} 14º
+    
+    \textbf{Recomendações:} 
+    \hyperref[disc:redes]{Redes de Computadores},
+    \hyperref[disc:aedII]{Algoritmos e Estruturas de Dados II},
+    \hyperref[disc:aedI]{Algoritmos e Estruturas de Dados I},
+    \hyperref[disc:pe]{Programação Estruturada},
+    Processamento da Informação, 
+    \hyperref[disc:poo]{Programação Orientada a Objetos},
+    \hyperref[disc:so]{Sistemas Operacionais},
+    \hyperref[disc:arq]{Arquitetura de Computadores},
+    \hyperref[disc:sist_dig]{Sistemas Digitais},
+    \hyperref[disc:circ_dig]{Circuitos Digitais},
+    Natureza da Informação,
+    Fenômenos Eletromagnéticos.
+\end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Permitir aos alunos compreender a importância dos sistemas distribuídos,
+conhecer os conceitos básicos referentes aos sistemas distribuídos, compreender
+a necessidade de estruturação adequada dos sistemas de informação distribuídos,
+e conhecer os principais componentes dos sistemas de informação distribuídos e
+técnicas usadas para desenvolvê-los. 
+
+\textbf{Conteúdo programático:}
+Introdução e caracterização de sistemas distribuídos. 
+Modelos arquiteturais, objetivos, aplicações e tendências modernas. 
+Processos, threads, virtualização, clientes e servidores remotos. 
+Comunicação e sincronização em sistemas distribuídos. 
+Nomeação. 
+Consistência e replicação. 
+Tolerância a falhas. 
+Segurança.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{Introduction and characteristics of distributed systems. 
+Architectural styles, goals, applications and modern trends. 
+Processes, threads, virtualization, clients and servers. 
+Communication and synchronization in distributed systems. 
+Naming. 
+Consistency and replication. 
+Fault tolerance. 
+Security.}
+
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{2007-tanenbaum, 2005-coulouris, 2007-ghosh}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{2009-tanenbaum, 2006-ben, 2008-kshemkalyani, 1997-lynch, 2017-tanenbaum}
+\printbibliography
+
+\end{document}

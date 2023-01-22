@@ -1,0 +1,92 @@
+\documentclass[class=article, crop=false]{standalone}
+
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTAnova4.bib}
+\addbibresource{MCTAnova4-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA027-23 -- Algoritmos em Grafos}
+\label{disc:ag}
+
+(\textbf{\textit{Graph Algorithms}})
+
+\begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \textbf{T-P-E-I:} 4-0-0-4
+        
+        \textbf{Carga horária:} 48 horas
+        
+        \textbf{Quadrimestre:} 9º
+        
+        \textbf{Recomendações:} 
+        \hyperref[disc:aedII]{Algoritmos e Estruturas de Dados II},
+        \hyperref[disc:aedI]{Algoritmos e Estruturas de Dados I},
+        \hyperref[disc:pe]{Programação Estruturada},
+        Processamento da Informação,
+        \hyperref[disc:mdII]{Matemática Discreta II},
+        \hyperref[disc:mdI]{Matemática Discreta I},
+        Funções de Uma Variável.
+    \end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Mostrar como representar um grafo computacionalmente (Matriz de Adjacências e
+Lista de Adjacências), discutir as vantagens e desvantagens de cada abordagem e
+discutir como adaptar tais estruturas para representar grafos nos quais os
+vértices e/ou arestas possuam atributos (por exemplo, grafos orientados, grafos
+ponderados, grafos com os vértices coloridos).
+Apresentar algoritmos eficientes para problemas clássicos em grafos e discutir,
+sem a necessidade de muito rigor formal, os tempos de execução dos algoritmos
+estudados. 
+Discutir o impacto das estruturas de dados escolhidas para a implementação dos
+algoritmos sobre o tempo de execução desses.
+
+Espera-se que ao final do curso o aluno seja capaz de modelar problemas em
+grafos. Espera-se que este conheça os principais problemas em grafos e os
+algoritmos eficientes que os resolvem. Espera-se também que o aluno tenha
+demonstrado capacidade de implementar tais algoritmos em uma linguagem de alto
+nível. Por fim, espera-se que o aluno tenha noções da complexidade de tempo de
+execução dos algoritmos cobertos ao longo do curso. Este curso tem como
+objetivo desenvolver tanto habilidades teóricas (algoritmos) como práticas
+(implementações eficientes de tais algoritmos).
+
+\textbf{Conteúdo programático:}
+Revisão da terminologia básica de Teoria dos Grafos.
+Noções de análise de algoritmos.
+Estruturas de dados para representação de grafos.
+Buscas em largura e profundidade e suas aplicações: caminhos mínimos sem pesos, componentes conexas.
+Grafos ponderados. 
+Árvores geradoras mínimas: algoritmos de Prim e Kruskal.
+Grafos Eulerianos e Hamiltonianos.
+O Problema do Caixeiro Viajante.
+Digrafos: definições básicas, componentes fortemente conexas e ordenação topológica.
+Caminhos mínimos em digrafos ponderados: algoritmos de Dijkstra, Bellman-Ford e Floyd–Warshall.
+Fluxo máximo: algoritmo de Ford-Fulkerson e suas aplicações.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{Review of basic terminology in Graph Theory.
+Notions of analysis of algorithms.
+Data structures for graph representation.
+Breadth and depth first search and their applications: shortest unweighted paths, connected components.
+Weighted graphs.
+Minimum spanning trees: Prim and Kruskal.
+Eulerian and Hamiltonian graphs.
+The Traveling Salesman Problem.
+Digraphs: basic definitions, strongly connected components, and topological sorting.
+Shortest paths in weighted digraphs: Dijkstra, Bellman-Ford, and Floyd-Warhall.
+Maximum flow: Ford-Fulkerson algorithm and its applications.}
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{2002-sedgewick, 2012-cormen-etal, 1995-tenenbaum-etal}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{2011-sedgewick-wayne, 2002-cormen-etal, 1993-ahuja-etal, 2008-dasgupta-etal}
+\printbibliography
+
+\end{document}

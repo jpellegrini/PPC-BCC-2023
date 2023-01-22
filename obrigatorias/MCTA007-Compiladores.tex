@@ -1,0 +1,77 @@
+\documentclass[class=article, crop=false]{standalone}
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTA007.bib}
+\addbibresource{MCTA007-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA007-23 -- Compiladores e Interpretadores}
+\label{disc:compi}
+
+(\textbf{\textit{Compilers and Interpreters}})
+
+\begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \textbf{T-P-E-I:} 4-0-0-4
+        
+        \textbf{Carga horária:} 48 horas
+        
+        \textbf{Quadrimestre:} 13º
+        
+        \textbf{Recomendações:} 
+        \hyperref[disc:lfa]{Linguagens Formais e Autômatos},
+        \hyperref[disc:mdII]{Matemática Discreta II},
+        \hyperref[disc:mdI]{Matemática Discreta I},
+        Funções de Uma Variável,
+        \hyperref[disc:aaII]{Análise de Algoritmos II},
+        \hyperref[disc:aaI]{Análise de Algoritmos I},
+        \hyperref[disc:ag]{Algoritmos em Grafos},
+        \hyperref[disc:aedII]{Algoritmos e Estruturas de Dados II},
+        \hyperref[disc:aedI]{Algoritmos e Estruturas de Dados I},
+        \hyperref[disc:pe]{Programação Estruturada},
+        Processamento da Informação.
+    \end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Introduzir os princípios de projeto e construção de compiladores, interpretadores e sistemas de suporte
+em tempo de execução para linguagens de programação. Investigar os processos de reconhecimento, tradução 
+e otimização de programas em linguagens de alto nível para códigos em linguagens de máquina de baixo nível.
+Examinar a interação entre o projeto de linguagens, o projeto de compiladores, e a organização requerida em
+tempo de execução.
+
+\textbf{Conteúdo programático:}
+Compiladores e interpretadores: objetivos, estruturas e fases.
+Análise léxica. 
+Análises sintáticas ascendente e descendente. 
+Análise semântica: árvores de sintaxe, tipos e checagem de tipos, análise de fluxo de dados.
+Linguagens intermediárias e técnicas para geração e otimização de código.
+Sistemas de suporte em tempo de execução, máquinas virtuais, gerenciamento automático de memória.
+Projeto e implementação de um compilador/interpretador.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{
+Compilers and interpreters: goals, structures, phases.
+Lexical analysis.
+Ascending and descending parsing.
+Syntax-directed translation, abstract syntax trees, types and type checking, dataflow analysis.
+Intermediate languages, code generation, and program/code optimization.
+Runtime systems, virtual machines, automatic memory management.
+Projecting and coding a compiler/interpreter.
+}
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{2006-aho-etal,2002-appel,2004-louden}
+% listar todas as chaves do arquivo de bibliografia básica, na ordem desejada
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{2004-cooper-torczon,2008-ricarte,2000-grune-etal,1998-lewis-papadimitriou,2006-hopcroft-etal} 
+% listar todas as chaves do arquivo de bibliografia complementar, na ordem desejada
+\printbibliography
+
+\end{document}

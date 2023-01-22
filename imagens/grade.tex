@@ -3,6 +3,7 @@
 \usepackage{amsmath, amsthm, amsfonts, amssymb}
 \usepackage{tikz}
 \usetikzlibrary{shapes,snakes,positioning,calc}
+\usepackage{hyperref}
 
 \newcommand{\disciplina}[6][nyellow]{
 \node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
@@ -11,7 +12,7 @@ text centered, anchor=west] (#4) at (#2,#3) {
    \begin{minipage}{#5pt}
    \linespread{1.0}\selectfont
        \centering
-       \scriptsize{#6}
+       \footnotesize{#6}
    \end{minipage}
 };
 }
@@ -29,12 +30,12 @@ text centered, anchor=west] (#4) at (#2,#3) {
 
 \begin{tikzpicture}
 
-    \def\sz{21pt}
-    \def\doisc{36} % 2*\sz - 6
-    \def\tresc{57} % 3*\sz - 6
-    \def\quatc{78} % 4*\sz - 6
-    \def\cincc{99} % 5*\sz - 6
-    \def\seisc{120} % 6*\sz - 6
+    \def\sz{22pt}
+    \def\doisc{38} % 2*\sz - 6
+    \def\tresc{60} % 3*\sz - 6
+    \def\quatc{82} % 4*\sz - 6
+    \def\cincc{104} % 5*\sz - 6
+    \def\seisc{126} % 6*\sz - 6
     
     %Q1
     \node [draw, rotate=90, black,rectangle, minimum width=120pt, minimum
@@ -53,7 +54,7 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [gray!60]{13*\sz}{0pt}{e}{\tresc}{Evolução e Diversificação da Vida na Terra \\(3-0-0-4)}
     
-    \disciplina [gray!60]{16*\sz}{0pt}{f}{\doisc}{Bases Computacionais da Ciência \\(0-2-0-2)}
+    \disciplina [gray!60]{16*\sz}{0pt}{f}{\doisc}{\scriptsize Bases Computacionais da Ciência \\(0-2-0-2)}
     
     
     %Q2
@@ -99,7 +100,7 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [gray!60]{12*\sz}{-120pt}{a}{\tresc}{Introdução à Probabilidade e Estatística\\(3-0-0-4)}
     
-    \disciplina [nblue]{15*\sz}{-120pt}{a}{\quatc}{Matemática Discreta I\\(4-0-0-4)}
+    \disciplina [nblue]{15*\sz}{-120pt}{a}{\quatc}{\hyperref[disc:mdI]{Matemática Discreta I}\\(4-0-0-4)}
 
     
     %Q5
@@ -112,7 +113,7 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [gray!60]{8*\sz}{-160pt}{a}{\quatc}{Física Quântica\\(4-0-0-4)}
     
-    \disciplina [nblue]{12*\sz}{-160pt}{a}{\quatc}{Programação Estruturada\\(2-2-0-6)}
+    \disciplina [nblue]{12*\sz}{-160pt}{a}{\quatc}{\hyperref[disc:pe]{Programação Estruturada}\\(2-2-0-6)}
     
 
     %Q6
@@ -121,11 +122,11 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [gray!60]{0*\sz}{-200pt}{a}{\tresc}{Humanidades 3\\(3-0-0-4)}
     
-    \disciplina [nblue]{3*\sz}{-200pt}{a}{\quatc}{Circuitos Digitais\\(3-1-0-4)}
+    \disciplina [nblue]{3*\sz}{-200pt}{a}{\quatc}{\hyperref[disc:circ_dig]{Circuitos Digitais}\\(3-1-0-4)}
     
-    \disciplina [nblue]{7*\sz}{-200pt}{a}{\quatc}{Matemática Discreta II\\(4-0-0-4)}
+    \disciplina [nblue]{7*\sz}{-200pt}{a}{\seisc}{\hyperref[disc:alge_lin]{Álgebra Linear}\\(6-0-0-5)}
     
-    \disciplina [nblue]{11*\sz}{-200pt}{a}{\quatc}{Algoritmos e Estruturas de Dados I\\(2-2-0-6)}
+    \disciplina [nblue]{13*\sz}{-200pt}{a}{\quatc}{\hyperref[disc:aedI]{Algoritmos e Estruturas de Dados I}\\(2-2-0-6)}
     
 
     %Q7
@@ -135,13 +136,13 @@ text centered, anchor=west] (#4) at (#2,#3) {
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
     height=10pt, rounded corners] at (-10pt,-240pt) {\footnotesize{7º quad}};
     
-    \disciplina [nblue]{0*\sz}{-240pt}{a}{\quatc}{Programação Orientada a Objetos\\(2-2-0-4)}
+    \disciplina [nblue]{0*\sz}{-240pt}{a}{\quatc}{\hyperref[disc:poo]{Programação Orientada a Objetos}\\(2-2-0-4)}
     
-    \disciplina [nblue]{4*\sz}{-240pt}{a}{\quatc}{Sistemas Digitais\\(2-2-0-4)}
+    \disciplina [nblue]{4*\sz}{-240pt}{a}{\quatc}{\hyperref[disc:sist_dig]{Sistemas Digitais}\\(2-2-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-240pt}{a}{\seisc}{Álgebra Linear\\(6-0-0-5)}
+    \disciplina [nblue]{8*\sz}{-240pt}{a}{\quatc}{\hyperref[disc:mdII]{Matemática Discreta II}\\(4-0-0-4)}
     
-    \disciplina [nblue]{14*\sz}{-240pt}{a}{\quatc}{Algoritmos e Estruturas de Dados II\\(4-0-0-6)}
+    \disciplina [nblue]{12*\sz}{-240pt}{a}{\quatc}{\hyperref[disc:aedII]{Algoritmos e Estruturas de Dados II}\\(4-0-0-6)}
     
     
     %Q8
@@ -150,11 +151,11 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [nyellow]{0*\sz}{-280pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-280pt}{a}{\quatc}{Arquitetura de Computadores\\(4-0-0-4)}
+    \disciplina [nblue]{4*\sz}{-280pt}{a}{\quatc}{\hyperref[disc:arq]{Arquitetura de Computadores}\\(4-0-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-280pt}{a}{\quatc}{Inteligência Artificial\\(4-0-0-4)}
+    \disciplina [nblue]{8*\sz}{-280pt}{a}{\quatc}{\hyperref[disc:ia]{Inteligência Artificial}\\(4-0-0-4)}
     
-    \disciplina [nblue]{12*\sz}{-280pt}{a}{\quatc}{Algoritmos em Grafos\\(4-0-0-4)}
+    \disciplina [nblue]{12*\sz}{-280pt}{a}{\quatc}{\hyperref[disc:ag]{Algoritmos em Grafos}\\(4-0-0-4)}
     
     
     %Q9
@@ -163,11 +164,11 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [nyellow]{0*\sz}{-320pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-320pt}{a}{\quatc}{Redes de Computadores\\(3-1-0-4)}
+    \disciplina [nblue]{4*\sz}{-320pt}{a}{\quatc}{\hyperref[disc:redes]{Redes de Computadores}\\(3-1-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-320pt}{a}{\quatc}{Engenharia de Software\\(4-0-0-4)}
+    \disciplina [nblue]{8*\sz}{-320pt}{a}{\quatc}{\hyperref[disc:es]{Engenharia de Software}\\(4-0-0-4)}
     
-    \disciplina [nblue]{12*\sz}{-320pt}{a}{\quatc}{Análise de Algoritmos I\\(4-0-0-4)}
+    \disciplina [nblue]{12*\sz}{-320pt}{a}{\quatc}{\hyperref[disc:aaI]{Análise de Algoritmos I}\\(4-0-0-4)}
     
 
     %Q10
@@ -179,11 +180,11 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [nyellow]{0*\sz}{-360pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-360pt}{a}{\doisc}{Computadores, Ética e Sociedade\\(2-0-0-4)}
+    \disciplina [nblue]{4*\sz}{-360pt}{a}{\doisc}{\hyperref[disc:ces]{\scriptsize Computadores, Ética e Sociedade}\\(2-0-0-4)}
     
-    \disciplina [nblue]{6*\sz}{-360pt}{a}{\quatc}{Programação Funcional\\(4-0-0-4)}
+    \disciplina [nblue]{6*\sz}{-360pt}{a}{\quatc}{\hyperref[disc:pf]{Programação Funcional}\\(4-0-0-4)}
     
-    \disciplina [nblue]{10*\sz}{-360pt}{a}{\quatc}{Análise de Algoritmos II\\(4-0-0-4))}
+    \disciplina [nblue]{10*\sz}{-360pt}{a}{\quatc}{\hyperref[disc:aaII]{Análise de Algoritmos II}\\(4-0-0-4))}
     
     
     %Q11
@@ -192,11 +193,11 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [nyellow]{0*\sz}{-400pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-400pt}{a}{\quatc}{Modelagem de Banco de Dados\\(4-0-0-4)}
+    \disciplina [nblue]{4*\sz}{-400pt}{a}{\quatc}{\hyperref[disc:mbd]{Modelagem de Banco de Dados}\\(4-0-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-400pt}{a}{\quatc}{Computação Gráfica\\(0-4-0-4)}
+    \disciplina [nblue]{8*\sz}{-400pt}{a}{\quatc}{\hyperref[disc:cg]{Computação Gráfica}\\(0-4-0-4)}
     
-    \disciplina [nblue]{12*\sz}{-400pt}{a}{\quatc}{Otimização Linear\\(4-0-0-4)}
+    \disciplina [nblue]{12*\sz}{-400pt}{a}{\quatc}{\hyperref[disc:ol]{Otimização Linear}\\(4-0-0-4)}
     
     %Q12
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
@@ -204,11 +205,11 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [nyellow]{0*\sz}{-440pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-440pt}{a}{\doisc}{Metod.\ e Escr.\ Cient.\ para Comp.\\(2-0-0-2)}
+    \disciplina [nblue]{4*\sz}{-440pt}{a}{\doisc}{\scriptsize Metod.\ e Escr.\ Cient.\ para Comp.\\(2-0-0-2)}
     
-    \disciplina [nblue]{6*\sz}{-440pt}{a}{\quatc}{Sistemas Operacionais\\(3-1-0-4)}
+    \disciplina [nblue]{6*\sz}{-440pt}{a}{\quatc}{\hyperref[disc:so]{Sistemas Operacionais}\\(3-1-0-4)}
     
-    \disciplina [nblue]{10*\sz}{-440pt}{a}{\quatc}{Linguagens Formais e Autômatos\\(4-0-0-4)}
+    \disciplina [nblue]{10*\sz}{-440pt}{a}{\quatc}{\hyperref[disc:lfa]{Linguagens Formais e Autômatos}\\(4-0-0-4)}
     
 
     %Q13
@@ -222,7 +223,7 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [nblue]{4*\sz}{-480pt}{a}{\quatc}{Trabalho de Conclusão de Curso I\\(4-0-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-480pt}{a}{\quatc}{Compiladores e Interpretadores\\(4-0-0-4)}
+    \disciplina [nblue]{8*\sz}{-480pt}{a}{\quatc}{\hyperref[disc:compi]{Compiladores e Interpretadores}\\(4-0-0-4)}
     
     
     %Q14
@@ -233,7 +234,7 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [nblue]{4*\sz}{-520pt}{a}{\quatc}{Trabalho de Conclusão de Curso II\\(4-0-0-6)}
     
-    \disciplina [nblue]{8*\sz}{-520pt}{a}{\quatc}{Sistemas Distribuídos\\(3-1-0-4)}
+    \disciplina [nblue]{8*\sz}{-520pt}{a}{\quatc}{\hyperref[disc:sist_dist]{Sistemas Distribuídos}\\(3-1-0-4)}
     
 
     %Q15
@@ -244,14 +245,15 @@ text centered, anchor=west] (#4) at (#2,#3) {
 
     \disciplina [nblue]{4*\sz}{-560pt}{a}{\quatc}{Trabalho de Conclusão de Curso III\\(4-0-0-6)}
     
-    \disciplina [nblue]{8*\sz}{-560pt}{a}{\quatc}{Segurança de Dados\\(3-1-0-4)}
+    \disciplina [nblue]{8*\sz}{-560pt}{a}{\quatc}{\hyperref[disc:seg]{Segurança de Dados}\\(3-1-0-4)}
     
     
     \draw [red,thick,dashed] (20*\sz,20pt) -- (20*\sz,-580pt); 
     \node [text=red] at (420pt,35pt) {20 créditos};
 
 
-    \node [text=black] at (-20pt, -620pt) {\textbf{Legenda:} }	;
+    % Legenda
+    \node [text=black] at (-20pt, -620pt) {\textbf{Legenda:}};
     \disciplina [gray!60]{15pt}{-620pt}{bis0505}{63}{Obrigatória BC\&T\\(T-P-E-I)}
     
     \disciplina [nblue]{88pt}{-620pt}{bis0505}{63}{Obrigatória BCC\\(T-P-E-I)}

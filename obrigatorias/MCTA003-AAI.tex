@@ -1,0 +1,76 @@
+\documentclass[class=article, crop=false]{standalone}
+
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTA003.bib}
+\addbibresource{MCTA003-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA003-23 -- Análise de Algoritmos I}
+\label{disc:aaI}
+
+(\textbf{\textit{Analysis of Algorithms I}})
+
+\begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \textbf{T-P-E-I:} 4-0-4
+        
+        \textbf{Carga horária:} 48 horas
+        
+        \textbf{Quadrimestre:} 9º
+        
+        \textbf{Recomendações:} 
+        \hyperref[disc:mdII]{Matemática Discreta II},
+        \hyperref[disc:mdI]{Matemática Discreta I},
+        Funções de Uma Variável,
+        \hyperref[disc:ag]{Algoritmos em Grafos},
+        \hyperref[disc:aedII]{Algoritmos e Estruturas de Dados II},
+        \hyperref[disc:aedI]{Algoritmos e Estruturas de Dados I},
+        \hyperref[disc:pe]{Programação Estruturada},
+        Processamento da Informação.
+    \end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Este curso objetiva capacitar o aluno em projeto e análise de algoritmos. 
+Ao término do curso, espera-se que o discente seja capaz de demostrar a
+correção de um algoritmo iterativo ou recursivo, analisar o tempo de execução
+de um algoritmo, usar a notação assintótica para descrever o tempo de execução
+de um algoritmo, manipular recorrências.
+Além disso, espera-se que o discente seja capaz de projetar e compreender
+algoritmos que utilizam as técnicas de enumeração, backtracking, divisão e
+conquista e aleatorização.
+
+
+\textbf{Conteúdo programático:}
+Tempo de execução e análise assintótica.
+Corretude de algoritmos iterativos e recursivos.
+Recorrências e técnicas de solução de recorrências.
+Enumeração e backtracking.
+Divisão e conquista (sugestões de exemplos: Mergesort, multiplicação de
+inteiros, matrizes, par mais próximo, contagem de inversões).
+Aleatorização (sugestões de exemplos: Quicksort aleatorizado, problema da seleção). 
+Tópicos opcionais: análise amortizada.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{Running time and asymptotic analysis.
+Correctness of iterative and recursive algorithms.
+Recurrences and techniques for solving recurrences.
+Enumeration and backtracking.
+Divide and conquer (suggestions: Mergesort, integer multiplication, matrices, closest pair of points, counting inversions).
+Randomization (suggestions: randomized Quicksort, selection problem).
+Optional topics: amortized analysis.}
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{2012-cormen-etal, 2008-dasgupta-etal, 1998-sedgewick}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{2011-sedgewick-wayne, 2006-kleinberg-tardos, 1989-manber}
+\printbibliography
+
+\end{document}

@@ -1,0 +1,76 @@
+\documentclass[class=article, crop=false]{standalone}
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTA026.bib}
+\addbibresource{MCTA026-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA026-23 -- Sistemas Operacionais}
+\label{disc:so}
+
+(\textbf{\textit{Operating Systems}})
+
+\begin{center}
+\begin{minipage}{0.85\textwidth}
+    \textbf{T-P-E-I:} 3-1-0-4
+    
+    \textbf{Carga horária:} 48 horas
+    
+    \textbf{Quadrimestre:} 12º
+    
+    \textbf{Recomendações:} 
+    \hyperref[disc:arq]{Arquitetura de Computadores},
+    \hyperref[disc:sist_dig]{Sistemas Digitais},
+    \hyperref[disc:circ_dig]{Circuitos Digitais},
+    Natureza da Informação, 
+    Fenômenos Eletromagnéticos,
+    \hyperref[disc:aedII]{Algoritmos e Estruturas de Dados II},
+    \hyperref[disc:aedI]{Algoritmos e Estruturas de Dados I},
+    \hyperref[disc:pe]{Programação Estruturada}, 
+    Processamento da Informação.
+\end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Permitir ao aluno conhecer as funções e estruturas básicas de um sistema
+operacional, como sistemas de arquivos, técnicas de gerenciamento de processos
+e memória, controle de processadores e dispositivos. 
+
+\textbf{Conteúdo programático:}
+Introdução aos sistemas operacionais e a sua arquitetura. 
+Gerenciamento de processos e threads.
+Escalonamento, sincronização e impasses.
+Gerenciamento de memória. 
+Memória principal e virtual. 
+Gerenciamento de armazenamento. 
+Sistemas de arquivo, estruturas de armazenamento em massa. 
+Sistemas de entrada/saída (E/S). 
+Proteção e segurança. 
+Estudos de casos.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{Introduction to operating systems and their architecture. 
+Processes and threads management. 
+Scheduling, synchronization, and deadlocks. 
+Memory management. 
+Main and virtual memory. 
+Storage management. 
+File systems, mass-storage structures. 
+Input/Output systems (I/O). 
+Protection and security. 
+Case studies.}
+
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{2010-silberschatz, 2016-tanenbaum, 2005-deitel}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{2018-flynn, 2009-stallings, 2005-bovet, 2008-tanenbaum, 2004-oliveira}
+\printbibliography
+
+\end{document}

@@ -1,0 +1,90 @@
+\documentclass[class=article, crop=false]{standalone}
+
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTA028.bib}
+\addbibresource{MCTA028-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA028-23 -- Programação Estruturada}
+\label{disc:pe}
+
+(\textbf{\textit{Structured Programming}})
+
+\begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \textbf{T-P-E-I:} 2-2-0-6
+        
+        \textbf{Carga horária:} 48 horas
+        
+        \textbf{Quadrimestre:} 5º
+        
+        \textbf{Recomendações:} 
+        Processamento da Informação.
+        
+        \textbf{Observação:} disciplina compartilhada com a Engenharia da Informação.
+    \end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Ao concluir esse curso, espera-se que o discente esteja capacitado em
+programação na linguagem compilada adotada ao longo do curso, ou seja: que
+saiba a sintaxe básica da linguagem (declaração de tipos e variáveis,
+estruturas de controle de fluxo, declaração de funções, declaração de novos
+tipos e etc); que seja capaz de desenvolver funções recursivas; que seja capaz
+de ler e escrever dados em arquivos; que compreenda como funciona a organização
+de memória na alocação estática e dinâmica; que seja capaz de gerenciar a
+memória manualmente usando ponteiros. 
+Além disso, almeja-se que ao final do curso o discente tenha sido capacitado em
+desenvolvimento de software, isto é: que ele conheça as boas práticas de
+programação (indentação correta, documentação adequada, organização de código);
+que entenda o processo de compilação e que seja capaz de compilar seus próprios
+programas sem o auxílio de uma IDE; que saiba usar uma ferramenta para debugar
+um código defeituoso e que seja capaz de desenvolver estratégias para encontrar
+o defeito nesse.
+Por fim, esperamos que o discente tenha sido capacitado em estruturas de dados
+simples (vetores, matrizes, lista ligadas simples) e que conheça e seja capaz
+de implementar os algoritmos básicos de ordenação (Bubble Sort, Selection Sort,
+Insertion Sort) e de busca (busca linear e busca binária).
+
+\textbf{Conteúdo programático:}
+Introdução a uma linguagem compilada com suporte a alocação de memória: revisão 
+de expressões, comandos condicionais e de repetição, entrada/saída, funções, 
+vetores e matrizes.
+Noções básicas sobre compilação e organização de computadores.
+Depuração e organização de programas.
+Recursão.
+Registros.
+Ponteiros, alocação estática e dinâmica de memória.
+Listas ligadas simples.
+Arquivos texto e binários.
+Algoritmos elementares de ordenação: Bubble Sort, Selection Sort, Insertion Sort.
+Busca linear e busca binária.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{Introduction to a compiled language with support to memory allocation:
+review of expressions, selection and repetition commands, input/output,
+functions, arrays and matrices.
+Basic notions of compiling and computer organization.
+Debugging and organizing programs.
+Recursion.
+Records/structures.
+Pointers, static and dynamic memory allocation.
+Simple linked lists.
+Text and binary files.
+Elementary sorting algorithms: Bubble Sort, Selection Sort, Insertion Sort.
+Linear search and binary search.}
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{1998-sedgewick, 2005-forbellone-eberspacher, 1989-kernighan-ritchie}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{2009-feofiloff,2007-ziviani,2010-szwarcfiter-markenzon,1995-tenenbaum-etal,1997-schildt}
+\printbibliography
+
+\end{document}

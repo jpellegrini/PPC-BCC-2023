@@ -1,0 +1,77 @@
+\documentclass[class=article, crop=false]{standalone}
+
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTA008.bib}
+\addbibresource{MCTA008-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA008-23 -- Computação Gráfica}
+\label{disc:cg}
+
+(\textbf{\textit{Computer Graphics}})
+
+\begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \textbf{T-P-E-I:} 0-4-0-4
+        
+        \textbf{Carga horária:} 48 horas
+        
+        \textbf{Quadrimestre:} 11º
+        
+        \textbf{Recomendações:}
+        \hyperref[disc:aedI]{Algoritmos e Estrutura de Dados I},
+        \hyperref[disc:pe]{Programação Estruturada},
+        Processamento da Informação, 
+        \hyperref[disc:poo]{Programação Orientada a Objetos},
+        Geometria Analítica.
+    \end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Apresentar ao aluno conceitos teóricos e técnicas de programação em Computação
+Gráfica.
+
+\textbf{Conteúdo programático:}
+Computação gráfica.
+Sistemas gráficos.
+Primitivas gráficas e seus atributos.
+Transformações geométricas.
+Projeções paralela e perspectiva.
+Câmera virtual.
+Definição de objetos e cenas tridimensionais.
+O processo de \textit{rendering}: fontes de luz.
+Remoção de superfícies ocultas.
+Modelos de iluminação e de tonalização.
+Animação computacional.
+Texturas.
+Introdução aos \textit{shaders} programáveis (utilizando alguma API gráfica, preferencialmente OpenGL).
+
+\textbf{Conteúdo programático em inglês:}
+\textit{Computer Graphics.
+Graphics systems.
+Graphics primitives and their attributes.
+Geometric Transformations.
+Parallel and perspective projections.
+Virtual camera.
+Objects definitions and tridimensional scenes.
+Rendering process: source of light.
+Removal of hidden surfaces.
+Ilumination and tonalization models.
+Computational animation.
+Textures.
+Introduction to programmable shaders (using some graphic API, preferably OpenGL).}
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{2008-gomes-etal,2003-azevedo-etal,2020-vries}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{2003-edward,2004-edward,2009-bailey-etal,2005-shreiner-etal,2016-kessenich-etal}
+\printbibliography
+
+\end{document}

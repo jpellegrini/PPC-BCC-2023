@@ -1,0 +1,84 @@
+\documentclass[class=article, crop=false]{standalone}
+
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTAnova5.bib}
+\addbibresource{MCTAnova5-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA???-23 -- Análise de Algoritmos II}
+\label{disc:aaII}
+
+(\textbf{\textit{Analysis of Algorithms II}})
+
+\begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \textbf{T-P-E-I:} 4-0-0-4
+        
+        \textbf{Carga horária:} 48 horas
+        
+        \textbf{Quadrimestre:} 10º
+        
+        \textbf{Recomendações:} 
+        \hyperref[disc:aaI]{Análise de Algoritmos I},
+        \hyperref[disc:mdII]{Matemática Discreta II},
+        \hyperref[disc:mdI]{Matemática Discreta I},
+        Funções de Uma Variável,
+        \hyperref[disc:ag]{Algoritmos em Grafos},
+        \hyperref[disc:aedII]{Algoritmos e Estruturas de Dados II},
+        \hyperref[disc:aedI]{Algoritmos e Estruturas de Dados I},
+        \hyperref[disc:pe]{Programação Estruturada},
+        Processamento da Informação.
+    
+    \end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Dar continuidade ao estudo de projeto e análise de algoritmos iniciado no curso
+Análise de Algoritmos I, apresentando novas técnicas e analisando também
+problemas mais complexos, que envolvam grafos como estrutura de dados.
+
+Ao término do curso, espera-se que o discente seja capaz de analisar algoritmos
+em grafos, tanto com relação à corretude quanto ao tempo de execução.
+Espera-se também que o discente seja capaz de projetar e compreender algoritmos
+que utilizam as técnicas de algoritmos gulosos e programação dinâmica. 
+Por fim, espera-se que o discente tenha sido introduzido à teoria da
+complexidade computacional, que compreenda as classes de problemas P, NP,
+NP-completo e NP-difícil, que seja capaz de demonstrar que alguns problemas
+pertencem a tais classes, que compreenda a questão ``P vs NP'', que seja capaz
+de realizar reduções entre problemas e demonstrar que tais reduções estão
+corretas.
+
+\textbf{Conteúdo programático:}
+Análise dos algoritmos básicos de busca em grafos.
+Técnicas de projeto de algoritmos: método guloso (sugestões de exemplos: Escalonamento
+de tarefas, Kruskal, Prim, Dijkstra, Mochila fracionária, Huffman) e programação 
+dinâmica (sugestões de exemplos: Corte de barras, Bellman-Ford, Floyd-Warshall, 
+Alinhamento de sequências, Mochila inteira).
+Introdução à teoria da complexidade computacional: redução entre problemas e 
+classes P, NP, NP-completo e NP-difícil.
+Tópicos opcionais: noções de abordagens para tratar problemas NP-completos e NP-difíceis.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{Analysis of the basic graph search algorithms.
+Techniques for design of algorithms: greedy method (suggestions: activity
+selection, Kruskal, Prim, Dijkstra, fractional Knapsack, Huffman) and dynamic
+programming (suggestions: rod cutting, Bellman-Ford, Floyd-Warshall, sequence
+alignment, integer Knapsack).
+Introduction to computational complexity theory: reduction between problems and
+classes P, NP, NP-complete and NP-hard.
+Optional topics: notions on how to deal with NP-complete and NP-hard problems.}
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{2002-cormen-etal, 2008-dasgupta-etal, 2002-sedgewick}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+\nocite{1998-sedgewick, 2011-sedgewick-wayne, 2006-kleinberg-tardos, 1989-manber}
+\printbibliography
+
+\end{document}

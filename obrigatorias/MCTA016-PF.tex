@@ -1,0 +1,75 @@
+\documentclass[class=article, crop=false]{standalone}
+
+\IfFileExists{header.tex}{\input{header}}{\input{../header}}
+
+% Gerenciamento da bibliografia
+\addbibresource{MCTA016.bib}
+\addbibresource{MCTA016-compl.bib}
+
+\begin{document}
+
+\subsection{MCTA016-23 -- Programação Funcional}
+\label{disc:pf}
+
+(\textbf{\textit{Functional Programming}})
+
+\begin{center}
+    \begin{minipage}{0.85\textwidth}
+        \textbf{T-P-I:} 4-0-4
+        
+        \textbf{Carga horária:} 48 horas
+        
+        \textbf{Quadrimestre:} 10º
+        
+        \textbf{Recomendações:} 
+        \hyperref[disc:aedI]{Algoritmos e Estrutura de Dados I},
+        \hyperref[disc:pe]{Programação Estruturada},
+        Processamento da Informação.
+    \end{minipage}
+\end{center}
+
+\textbf{Objetivos:}
+Apresentar noções básicas e intermediárias sobre paradigma funcional não-tipado
+(cálculo lambda) e tipado. Ensinar os conceitos fundamentais como funções,
+recursão, recursão de cauda, sistemas de tipos, álgebra de tipos, polimorfismo,
+funções de alta ordem, abstração, tratamento de efeitos colaterais, e conceitos
+elementares da teoria dos tipos e das categorias aplicados na programação
+funcional. Para tanto, será utilizada uma linguagem estritamente funcional
+moderna ou que estimule o uso dos conceitos desse paradigma.
+
+\textbf{Conteúdo programático:}
+Paradigma funcional e imutabilidade.
+Cálculo lambda.
+Funções, recursão, recursão de cauda.
+Funções de alta ordem e \textit{currying}.
+Tipos de Dados Algébricos.
+Polimorfismo ad-hoc e paramétrico.
+Semigrupos e monoides.
+Funtores e monadas.
+Tratamento de efeitos colaterais com monadas.
+Estruturas de dados funcionais.
+
+\textbf{Conteúdo programático em inglês:}
+\textit{Functional paradigm and immutability.
+Lambda Calculus.
+Functions, recursion, tail recursion.
+High-order functions and currying.
+Algebraic Data Types.
+Ad-hoc and parametric polymorphisms.
+Semigroups and monoids.
+Functors and monads.
+Side-effects treatment with monads.
+Functional data structures.}
+
+\newrefsection
+\textbf{Bibliografia básica:}
+\nocite{1994-wadler-etal,1998-okasaki,2016-hutton}
+\printbibliography
+
+\newrefsection
+\textbf{Bibliografia complementar:}
+%\nocite{1991-thompson,2020-wadler,2002-pierce,2009-dybvig,2009-sullivan-etal,2021-hickey-etal,2009-cesarini-etal,2014-thomas,2004-hankin,2008-hindley-etal}
+\nocite{2020-wadler,2009-dybvig,2009-sullivan-etal,2021-hickey-etal,2009-cesarini-etal}
+\printbibliography
+
+\end{document}
