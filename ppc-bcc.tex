@@ -31,8 +31,8 @@
 \usepackage{multirow}
 \usepackage{makecell}
 \usepackage{enumitem}
-\usepackage[labelfont=bf,small,font=sl,justification=centering,skip=5pt]{caption}
-\captionsetup[table]{skip=-5pt}
+\usepackage[labelfont=bf,small,font=sl,justification=centering,skip=2pt]{caption}
+\captionsetup[table]{skip=2pt}
 
 
 % Gerenciamento dos hyperlinks
@@ -40,6 +40,7 @@
 \usepackage{hyperref}
 \hypersetup{
   colorlinks=true,
+  breaklinks=true,
   linkcolor=dark-green,
   citecolor=dark-green,
   urlcolor=dark-green,
@@ -51,7 +52,11 @@
 % Gerenciamento de figuras
 \usepackage{graphicx}
 \usepackage{tikz}
-\usetikzlibrary{shapes,snakes,positioning,calc}
+
+\usetikzlibrary{shapes,snakes,positioning,calc,arrows.meta,decorations.markings}
+\tikzset{seta/.style={decoration={markings,mark=at position 1 with %
+    {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}}}
+
 \newcommand{\disciplina}[6][yellow!20]{
 \node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
 sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=40pt,
@@ -60,6 +65,17 @@ text centered, anchor=west] (#4) at (#2,#3) {
    \linespread{1.0}\selectfont
        \centering
        \scriptsize{#6}
+   \end{minipage}
+};
+}
+\newcommand{\disciplinab}[6][yellow!20]{
+\node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
+sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=40pt,
+text centered, anchor=west] (#4) at (#2,#3) {
+   \begin{minipage}{#5pt}
+   \linespread{1.0}\selectfont
+       \centering
+       \small{#6}
    \end{minipage}
 };
 }
@@ -87,6 +103,72 @@ text centered, anchor=west] (#4) at (#2,#3) {
 \newcommand\T{\rule{0pt}{5.6ex}}       % Top strut
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+
+% Gerenciamento da bibliografia
+\usepackage[style=abnt-numeric,sorting=none,maxbibnames=99]{biblatex}
+\setlength\bibitemsep{0pt}
+\defbibheading{bibliography}[\bibname]{}
+\defbibnote{space}{\vskip -0.5cm}
+
+\let\OLDprintbibliography\printbibliography
+\renewcommand\printbibliography{
+    \OLDprintbibliography[prenote=space]
+}
+
+\newcommand{\incluircurso}[1]{\input{#1}\cleardoublepage}
+
+\addbibresource{obrigatorias/MCTA001.bib}
+\addbibresource{obrigatorias/MCTA001-compl.bib}
+\addbibresource{obrigatorias/MCTA002.bib}
+\addbibresource{obrigatorias/MCTA002-compl.bib}
+\addbibresource{obrigatorias/MCTA003.bib}
+\addbibresource{obrigatorias/MCTA003-compl.bib} 
+\addbibresource{obrigatorias/MCTA004.bib}
+\addbibresource{obrigatorias/MCTA004-compl.bib}
+\addbibresource{obrigatorias/MCTA006.bib}
+\addbibresource{obrigatorias/MCTA006-compl.bib}
+\addbibresource{obrigatorias/MCTA007.bib}
+\addbibresource{obrigatorias/MCTA007-compl.bib}
+\addbibresource{obrigatorias/MCTA008.bib}
+\addbibresource{obrigatorias/MCTA008-compl.bib}
+\addbibresource{obrigatorias/MCTA009.bib}
+\addbibresource{obrigatorias/MCTA009-compl.bib}
+\addbibresource{obrigatorias/MCTA014.bib}
+\addbibresource{obrigatorias/MCTA014-compl.bib}
+\addbibresource{obrigatorias/MCTA015.bib}
+\addbibresource{obrigatorias/MCTA015-compl.bib}
+\addbibresource{obrigatorias/MCTA016.bib}
+\addbibresource{obrigatorias/MCTA016-compl.bib}
+\addbibresource{obrigatorias/MCTA017.bib}
+\addbibresource{obrigatorias/MCTA017-compl.bib}
+\addbibresource{obrigatorias/MCTA018.bib}
+\addbibresource{obrigatorias/MCTA018-compl.bib}
+\addbibresource{obrigatorias/MCTA022.bib}
+\addbibresource{obrigatorias/MCTA022-compl.bib}
+\addbibresource{obrigatorias/MCTA023.bib}
+\addbibresource{obrigatorias/MCTA023-compl.bib}
+\addbibresource{obrigatorias/MCTA024.bib}
+\addbibresource{obrigatorias/MCTA024-compl.bib}
+\addbibresource{obrigatorias/MCTA025.bib}
+\addbibresource{obrigatorias/MCTA025-compl.bib}
+\addbibresource{obrigatorias/MCTA026.bib}
+\addbibresource{obrigatorias/MCTA026-compl.bib}
+\addbibresource{obrigatorias/MCTA028.bib}
+\addbibresource{obrigatorias/MCTA028-compl.bib}
+\addbibresource{obrigatorias/MCTA033.bib}
+\addbibresource{obrigatorias/MCTA033-compl.bib}
+\addbibresource{obrigatorias/MCTA037.bib}
+\addbibresource{obrigatorias/MCTA037-compl.bib}
+\addbibresource{obrigatorias/MCTAnova1.bib}
+\addbibresource{obrigatorias/MCTAnova1-compl.bib}
+\addbibresource{obrigatorias/MCTAnova3.bib}
+\addbibresource{obrigatorias/MCTAnova3-compl.bib}
+\addbibresource{obrigatorias/MCTAnova4.bib}
+\addbibresource{obrigatorias/MCTAnova4-compl.bib}
+\addbibresource{obrigatorias/MCTAnova5.bib}
+\addbibresource{obrigatorias/MCTAnova5-compl.bib}
 
 
 \begin{document}
@@ -203,156 +285,12 @@ text centered, anchor=west] (#4) at (#2,#3) {
 \newpage
 \input{capitulos/17-disciplinas}
 
-\appendix
-
 \newpage
 \input{capitulos/18-disciplinas-ol}
 
+\newpage
+\input{capitulos/19-regras-transicao}
+
 \end{document}
 
-
-
-Disciplina obrigatória/optativa de Libras
-(Dec. N° 5.626/2005)
-
-Diretrizes Curriculares Nacionais do Curso.
-    
-
-O PPC está coerente com as Diretrizes Curriculares Nacionais? NSA para cursos que não têm Diretrizes Curriculares Nacionais.
-
-2
-    
-
-Diretrizes Curriculares Nacionais da Educação Básica (Resolução CNE/CEB 4/2010)
-     O PPC está coerente com as Diretrizes Curriculares Nacionais da Educação Básica?
-
-3
-    
-
-Diretrizes Curriculares Nacionais para Educação das Relações Étnico-raciais e para o Ensino de História e Cultura Afro-brasileira e Africana (Resolução CNE/CP N° 01 de 17 de junho de 2004)
-    
-
-A Educação das Relações Étnico-Raciais, bem como o tratamento de questões e temáticas que dizem respeito aos afrodescendentes estão inclusas nas disciplinas e atividades curriculares do curso?
-
-4
-    
-
-Diretrizes Nacionais para a Educação em Direitos Humanos (Parecer CNE/CP nº 8, de 06/03/2012, que originou a Resolução CNE/CP nº 1, de 30/05/2012)
-     O PPC contempla as Diretrizes Nacionais para a Educação em Direitos Humanos?
-
-5
-    
-
-Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista (Lei nº 12.764 de 27 de dezembro de 2012)
-    O PPC contempla a Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista?
-
-6
-    
-
-Titulação do corpo docente
-(Art. 66 da Lei 9.394, de 20 de dezembro de 1996)
-    
-
-Todo corpo docente tem formação em pós-graduação?
-
-7
-    
-
-Núcleo Docente Estruturante (NDE)
-(Resolução CONAES N° 1, de 17/06/2010)
-    
-
-O NDE atende à normativa pertinente?
-
-8
-    
-
-Denominação dos Cursos Superiores de Tecnologia
-(Portaria Normativa N° 12/2006)
-    
-
-A denominação do curso está adequada ao Catálogo Nacional dos Cursos Superiores de Tecnologia?
-
-9
-    
-
-Carga horária mínima, em horas – para Cursos Superiores de Tecnologia
-(Portaria N°10, 28/07/2006; Portaria N° 1024, 11/05/2006; Resolução CNE/CP N°3,18/12/2002)
-    
-
-Desconsiderando a carga horária do estágio profissional supervisionado e do Trabalho de Conclusão de Curso – TCC, caso estes estejam previstos, o curso possui carga horária igual ou superior ao estabelecido no Catálogo Nacional dos Cursos Superiores de Tecnologia?
-
-10
-    
-
-Carga horária mínima, em horas – para Bacharelados e Licenciaturas
-Resolução CNE/CES N° 02/2007 (Graduação, Bacharelado, Presencial). Resolução CNE/CES N° 04/2009 (Área de Saúde, Bacharelado, Presencial). Resolução CNE/CP 2 /2002 (Licenciaturas)
-Resolução CNE/CP Nº 1 /2006 (Pedagogia)
-    
-
-O curso atende à carga horária mínima em horas estabelecidas nas resoluções?
-
-11
-    
-
-Tempo de integralização
-Resolução CNE/CES N° 02/2007 (Graduação, Bacharelado, Presencial). Resolução CNE/CES N° 04/2009 (Área de Saúde, Bacharelado, Presencial).
-Resolução CNE/CP 2 /2002 (Licenciaturas)
-    
-
-O curso atende ao Tempo de Integralização proposto nas resoluções?
-
-12
-    
-
-Condições de acesso para pessoas com deficiência e/ou mobilidade reduzida
-(Dec. N° 5.296/2004, com prazo de implantação das condições até dezembro de 2008)
-    
-    
-
-A IES apresenta condições de acesso para pessoas com deficiência e/ou mobilidade reduzida?
-
-13
-    
-
-Disciplina obrigatória/optativa de Libras
-(Dec. N° 5.626/2005)
-    
-
-O PPC prevê a inserção de Libras na estrutura curricular do curso (obrigatória ou optativa, depende do curso)?
-
-14
-    
-
-Prevalência de avaliação presencial para EaD
-(Dec. N° 5.622/2005 art. 4 inciso II, § 2)
-    
-
-Os resultados dos exames presenciais prevalecem sobre os demais resultados obtidos em quaisquer outras formas de avaliação a distância?
-
-15
-    
-
-Informações acadêmicas
-(Portaria Normativa N° 40 de 12/12/2007, alterada pela Portaria Normativa MEC N° 23 de 01/12/2010, publicada em 29/12/2010)
-    
-
-As informações acadêmicas exigidas estão disponibilizadas na forma impressa e virtual?
-
-16
-    
-
-Políticas de educação ambiental
-(Lei nº 9.795, de 27 de abril de 1999 e Decreto Nº 4.281 de 25 de junho de 2002)
-    
-
-Há integração da educação ambiental às disciplinas do curso de modo transversal, contínuo e permanente?
-
-17
-    
-
-Diretrizes Curriculares Nacionais para a Formação de Professores da Educação Básica, em nível superior, curso de licenciatura, de graduação plena (Resolução CNE/CP 1/2002 e Resolução CNE/CP 2/2002)
-     O PPC contempla as Diretrizes Curriculares Nacionais para a Formação de Professores da Educação Básica, em nível superior, curso de licenciatura, de graduação plena?
-     
-     
 

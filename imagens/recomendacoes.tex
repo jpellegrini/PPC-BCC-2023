@@ -1,0 +1,143 @@
+
+\documentclass{standalone}
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes,positioning,calc}
+
+\newcommand{\disciplina}[6][nyellow]{
+\node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
+sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=40pt,
+text centered, anchor=west] (#4) at (#2,#3) {
+   \begin{minipage}{#5pt}
+   \linespread{1.0}\selectfont
+       \centering
+       \scriptsize{#6}
+   \end{minipage}
+};
+}
+\newcommand{\disciplinab}[6][yellow!20]{
+\node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
+sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=40pt,
+text centered, anchor=west] (#4) at (#2,#3) {
+   \begin{minipage}{#5pt}
+   \linespread{1.0}\selectfont
+       \centering
+       \small{#6}
+   \end{minipage}
+};
+}
+
+
+\usepackage{xcolor}
+\definecolor{nred}{rgb}{0.88, 0.28, 0.33}
+\definecolor{nblue}{rgb}{0.34, 0.74, 0.96}
+\definecolor{nyellow}{rgb}{0.8, 0.86, 0.38}
+\definecolor{npurple}{rgb}{0.25, 0.34, 0.93}
+\definecolor{ngreen}{rgb}{0.45, 0.95, 0.66}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+
+    \def\sz{21pt}
+    \def\doisc{36} % 2*\sz - 6
+    \def\tresc{57} % 3*\sz - 6
+    \def\quatc{78} % 4*\sz - 6
+    \def\cincc{99} % 5*\sz - 6
+    \def\seisc{120} % 6*\sz - 6
+    \def\h{40pt}
+
+
+    \disciplinab [nblue]{-1*\sz}{0*\h}{PE}{\tresc}{Programação Estruturada}
+    \disciplinab [nblue]{-1*\sz}{-2*\h}{AEDI}{\tresc}{Algoritmos e Estruturas de Dados I}
+    \disciplinab [nblue]{-1*\sz}{-4*\h}{AEDII}{\tresc}{Algoritmos e Estruturas de Dados II}
+    \disciplinab [nblue]{-1*\sz}{-6*\h}{AG}{\tresc}{Algoritmos em Grafos}
+    \disciplinab [nblue]{-1*\sz}{-8*\h}{AAI}{\tresc}{Análise de Algoritmos I}
+    \disciplinab [nblue]{-1*\sz}{-10*\h}{AAII}{\tresc}{Análise de Algoritmos II}
+    \disciplinab [nblue]{-1*\sz}{-12*\h}{LFA}{\tresc}{Linguagens Formais e Autômatos}
+    \disciplinab [nblue]{-1*\sz}{-14*\h}{COMP}{\tresc}{Compiladores e Interpretadores}
+
+    \disciplinab [nblue]{5*\sz}{-1*\h}{CG}{\tresc}{Computação Gráfica}
+    \disciplinab [nblue]{5*\sz}{-3*\h}{PF}{\tresc}{Programação Funcional}
+    \disciplinab [nblue]{5*\sz}{-5*\h}{IA}{\tresc}{Inteligência Artificial}
+    \disciplinab [nblue]{5*\sz}{-8*\h}{ARQ}{\tresc}{Arquitetura de Computadores}
+    \disciplinab [nblue]{5*\sz}{-10*\h}{SO}{\tresc}{Sistemas Operacionais}
+    \disciplinab [nblue]{5*\sz}{-12*\h}{MDII}{\tresc}{Matemática Discreta II}
+    \disciplinab [nblue]{5*\sz}{-14*\h}{OL}{\tresc}{Otimização Linear}
+
+    \disciplinab [nblue]{10*\sz}{-4*\h}{CD}{\tresc}{Circuitos Digitais}
+    \disciplinab [nblue]{10*\sz}{-6*\h}{SD}{\tresc}{Sistemas Digitais}
+    \disciplinab [nblue]{10*\sz}{-10*\h}{MD}{\tresc}{Matemática Discreta I}
+
+    \disciplinab [nblue]{15*\sz}{-14*\h}{AL}{\tresc}{Álgebra Linear}
+
+    \disciplinab [nblue]{20*\sz}{0*\h}{POO}{\tresc}{Programação Orientada a Objetos}
+    \disciplinab [nblue]{20*\sz}{-2*\h}{RD}{\tresc}{Redes de Computadores}
+    \disciplinab [nblue]{20*\sz}{-4*\h}{SDT}{\tresc}{Sistemas Distribuídos}
+
+    \disciplinab [nblue]{25*\sz}{0*\h}{ES}{\tresc}{Engenharia de Software}
+    \disciplinab [nblue]{25*\sz}{-2*\h}{BD}{\tresc}{Modelagem de Banco de Dados}
+    \disciplinab [nblue]{25*\sz}{-4*\h}{SEG}{\tresc}{Segurança de Dados}
+
+    \disciplinab [nblue]{20*\sz}{-14*\h}{CES}{\tresc}{Computadores, Ética e Sociedade}
+    \disciplinab [nblue]{25*\sz}{-14*\h}{MET}{\tresc}{Metod. e Escr. Cient. para Comp.}
+
+    \disciplinab [gray!50]{-1*\sz}{2*\h}{PI}{\tresc}{Processamento da Informação}
+    \disciplinab [gray!50]{5*\sz}{2*\h}{BCC}{\tresc}{Bases Computacionais da Ciência}
+    \disciplinab [gray!50]{10*\sz}{2*\h}{NI}{\tresc}{Natureza da Informação}
+    \disciplinab [gray!50]{15*\sz}{-4*\h}{FEMAG}{\tresc}{Fenômenos Eletromagnéticos}
+    \disciplinab [gray!50]{15*\sz}{-8*\h}{FEMEC}{\tresc}{Fenômenos Mecânicos}
+    \disciplinab [gray!50]{15*\sz}{-10*\h}{FUV}{\tresc}{Funções de Uma Variável}
+    \disciplinab [gray!50]{20*\sz}{-10*\h}{GA}{\tresc}{Geometria Analítica}
+    \disciplinab [gray!50]{15*\sz}{-12*\h}{BM}{\tresc}{Bases Matemáticas}
+    \disciplinab [gray!50]{10*\sz}{-12*\h}{FVV}{\tresc}{Funções de Várias Variáveis}
+
+    \draw[seta] (AEDI) -- (PE);
+    \draw[seta] (AEDII) -- (AEDI);
+    \draw[seta] (AG) -- (AEDII);
+    \draw[seta] (AAI) -- (AG);
+    \draw[seta] (AAII) -- (AAI);
+    \draw[seta] (LFA) -- (AAII);
+    \draw[seta] (AG) -- (MDII);
+    \draw[seta] (MDII) -- (MD);
+    \draw[seta] (OL) -- (AAII);
+    \draw[seta] (OL) -- (AL);
+    \draw[seta] (COMP) -- (LFA);
+    \draw[seta] (CG) -- (AEDI);
+    \draw[seta] (CG) -- (POO);
+    \draw[seta] (POO) -- (PE);
+    \draw[seta] (PF) -- (AEDI);
+    \draw[seta] (IA) -- (AEDI);
+    \draw[seta] (ARQ) -- (AEDI);
+    \draw[seta] (ARQ) -- (SD);
+    \draw[seta] (SD) -- (CD);
+    \draw[seta] (SO) -- (ARQ);
+    \draw[seta] (SO) -- (AEDII);
+    \draw[seta] (ES) -- (POO);
+    \draw[seta] (BD) -- (POO);
+    \draw[seta] (RD) -- (POO);
+    \draw[seta] (RD) -- (AEDI);
+    \draw[seta] (SDT) -- (RD);
+    \draw[seta] (SDT) -- (SO);
+    \draw[seta] (SEG) -- (RD);
+
+    \draw[seta,gray] (PE) -- (PI);
+    \draw[seta,gray] (PI) -- (BCC);
+    \draw[seta,gray] (NI) -- (BCC);
+    \draw[seta,gray] (CD) -- (NI);
+    \draw[seta,gray] (CD) -- (FEMAG);
+    \draw[seta,gray] (FEMAG) -- (FEMEC);
+    \draw[seta,gray] (FEMEC) -- (GA);
+    \draw[seta,gray] (FEMEC) -- (FUV);
+    \draw[seta,gray] (GA) -- (BM);
+    \draw[seta,gray] (FUV) -- (BM);
+    \draw[seta,gray] (AL) -- (GA);
+    \draw[seta,gray] (MD) -- (FUV);
+    \draw[seta,gray] (OL) -- (FVV);
+    \draw[seta,gray] (FVV) -- (FUV);
+    
+\end{tikzpicture}
+
+
+\end{document}
