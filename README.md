@@ -9,3 +9,14 @@ Há um arquivo `makefile` disponível, bastando executar o seguinte comando:
 ```
 make ppc
 ```
+
+# REGRAS DE TRANSIÇÃO
+
+As regras de transição encontram-se em arquivo separado do PPC.
+
+Para gerar o PDF, basta executar o comando:
+
+```
+make transicao
+```
+

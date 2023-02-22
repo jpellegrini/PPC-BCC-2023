@@ -9,7 +9,7 @@ default: all;
 build_dir:
 	mkdir -p $(BUILD_DIR)
 
-define compile_tex
+define compile_full_tex
 	$(LXC) $(1).tex
 	biber --output-directory build $(1) 
 	$(LXC) $(1).tex
@@ -17,8 +17,17 @@ define compile_tex
 	cp $(BUILD_DIR)/$(1).pdf .
 endef
 
+define compile_tex
+	$(LXC) $(1).tex
+	$(LXC) $(1).tex
+	cp $(BUILD_DIR)/$(1).pdf .
+endef
+
 ppc: build_dir
-	$(call compile_tex,ppc-bcc)
+	$(call compile_full_tex,ppc-bcc)
+
+transicao: build_dir
+	$(call compile_tex,regras-transicao)
 
 
 
