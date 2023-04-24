@@ -29,7 +29,8 @@ ppc: build_dir
 transicao: build_dir
 	$(call compile_tex,regras-transicao)
 
-
+ol: build_dir
+	$(call compile_tex,ol)
 
 
 clean:
