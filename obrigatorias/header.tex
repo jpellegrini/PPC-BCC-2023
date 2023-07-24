@@ -1,0 +1,84 @@
+                                                                                                                                        
+% Pacotes de formatação das fontes                                                                                                                   
+\usepackage[brazil]{babel}                                                                                                                           
+\usepackage[utf8]{inputenc}                                                                                                                          
+\usepackage[T1]{fontenc}                                                                                                                             
+\usepackage{fontspec}                                                                                                                                
+\setmainfont[                                                                                                                                        
+    Path=fonts/,                                                                                                                                     
+    BoldItalicFont=*-bold-italic-2.ttf,                                                                                                              
+    BoldFont      =*-bold-2.ttf,                                                                                                                     
+    ItalicFont    =*-italic.ttf]{calibri.ttf}                                                                                                        
+                                                                                                                                                     
+                                                                                                                                                     
+% Pacote para gerenciamento de espaçamentos                                                                                                          
+\usepackage[left=30mm,right=30mm,top=25mm,bottom=25mm]{geometry}                                                                                     
+\usepackage{indentfirst}                                                                                                                             
+\setlength{\parindent}{.5cm}                                                                                                                         
+\setlength{\parskip}{1em}                                                                                                                            
+\renewcommand{\baselinestretch}{1.5}                                                                                                                 
+
+                                                                                                                                   
+% Outros pacotes                                                                                                                                     
+\usepackage{xcolor}                                                                                                                                  
+\usepackage{float}                                                                                                                                   
+\usepackage{longtable}                                                                                                                               
+\usepackage{amsmath,amssymb,amsthm}                                                                                                                  
+\usepackage{multirow}                                                                                                                                
+\usepackage{makecell}                                                                                                                                
+\usepackage{enumitem}                                                                                                                                
+\usepackage{pdflscape}                                                                                                                               
+\usepackage[labelfont=bf,small,font=sl,justification=centering,skip=2pt]{caption}                                                                    
+\captionsetup[table]{skip=2pt}                                                                                                                       
+
+
+                                                                                                                                     
+% Gerenciamento dos hyperlinks                                                                                                                       
+\definecolor{dark-green}{HTML}{00781c}                                                                                                               
+\usepackage{hyperref}                                                                                                                                
+\hypersetup{                                                                                                                                         
+  colorlinks=true,                                                                                                                                   
+  breaklinks=true,                                                                                                                                   
+  linkcolor=dark-green,                                                                                                                              
+  citecolor=dark-green,                                                                                                                              
+  urlcolor=dark-green,                                                                                                                               
+  pdfsubject={Projeto Pedagógico BCC},                                                                                                               
+  pdftitle={Projeto Pedagógico BCC}                                                                                                                  
+}                                                                                                                                                    
+\urlstyle{same}                                                                                                                                      
+                                                                                                                                                     
+% Gerenciamento de figuras                                                                                                                           
+\usepackage{graphicx}                                                                                                                                
+\usepackage{tikz}
+
+
+                                                                                                                                                  
+% Espaçamentos nas listas                                                                                                                            
+\setlist[itemize]{noitemsep,topsep=0pt}                                                                                                              
+\setlist[enumerate]{noitemsep,topsep=0pt}                                                                                                            
+                                                                                                                                                     
+% Paleta de cores daltônico-friendly                                                                                                                 
+\definecolor{nred}{rgb}{0.88, 0.28, 0.33}                                                                                                            
+\definecolor{nblue}{rgb}{0.34, 0.74, 0.96}                                                                                                           
+\definecolor{nyellow}{rgb}{0.8, 0.86, 0.38}                                                                                                          
+\definecolor{npurple}{rgb}{0.25, 0.34, 0.93}                                                                                                         
+\definecolor{ngreen}{rgb}{0.45, 0.95, 0.66}                                                                                                          
+                                                                                                                                                     
+                                                                                                                                                     
+\usepackage{sectsty}                                                                                                                                 
+\sectionfont{\MakeUppercase}                                                                                                                         
+\subsectionfont{\MakeUppercase}
+
+                                                                                                                                 
+\usepackage{tocloft}                                                                                                                                 
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}                                                                                                  
+                                                                                                                                                     
+\newcommand\T{\rule{0pt}{5.6ex}}       % Top strut                                                                                                   
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut                                                                                                
+
+
+\usepackage{biblatex}
+
+\renewcommand{\section}[2]{}%
+
+
