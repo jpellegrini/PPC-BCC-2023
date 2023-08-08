@@ -5,9 +5,18 @@
 \usetikzlibrary{shapes,snakes,positioning,calc}
 \usepackage{hyperref}
 
+\def\altura{45pt}
+
+% \def\doisc{38} % 2*\sz - 6
+% \def\tresc{60} % 3*\sz - 6
+% \def\quatc{82} % 4*\sz - 6
+% \def\cincc{104} % 5*\sz - 6
+% \def\seisc{126} % 6*\sz - 6
+% \def\dozec{258} % 12*\sz - 6
+
 \newcommand{\disciplina}[6][nyellow]{
 \node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
-sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=40pt,
+sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=\altura,
 text centered, anchor=west] (#4) at (#2,#3) {
    \begin{minipage}{#5pt}
    \linespread{1.0}\selectfont
@@ -28,18 +37,28 @@ text centered, anchor=west] (#4) at (#2,#3) {
 \begin{document}
 
 \begin{tikzpicture}[scale=1.01]
+\def\altura{45pt}
+\def\sz{24.75pt}
 
-    \def\sz{22pt}
-    \def\doisc{38} % 2*\sz - 6
-    \def\tresc{60} % 3*\sz - 6
-    \def\quatc{82} % 4*\sz - 6
-    \def\cincc{104} % 5*\sz - 6
-    \def\seisc{126} % 6*\sz - 6
-    \def\dozec{258} % 12*\sz - 6
+\def\doisc{43.5} % 2*\sz - 6
+\def\tresc{68.25} % 3*\sz - 6
+\def\quatc{93.0} % 4*\sz - 6
+\def\cincc{117.75} % 5*\sz - 6
+\def\seisc{142.5} % 6*\sz - 6
+\def\dozec{291.0} % 12*\sz - 6
+
+
+    % \def\sz{22pt}
+    % \def\doisc{38} % 2*\sz - 6
+    % \def\tresc{60} % 3*\sz - 6
+    % \def\quatc{82} % 4*\sz - 6
+    % \def\cincc{104} % 5*\sz - 6
+    % \def\seisc{126} % 6*\sz - 6
+    % \def\dozec{258} % 12*\sz - 6
     
     %Q1
     \node [draw, rotate=90, black,rectangle, minimum width=120pt, minimum
-    height=10pt, rounded corners] at (-25pt,-40pt) {\footnotesize{1º ANO}};
+    height=10pt, rounded corners] at (-25pt,-\altura) {\footnotesize{1º ANO}};
     
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
     height=10pt, rounded corners] at (-10pt,0pt) {\footnotesize{1º quad}};
@@ -56,247 +75,254 @@ text centered, anchor=west] (#4) at (#2,#3) {
     
     \disciplina [gray!60]{16*\sz}{0pt}{f}{\doisc}{\scriptsize BIS0005-15\\Bases Comp. da Ciência \\(0-2-0-2)}
     
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,0pt) {18 créditos};
+    \node [rectangle, minimum width=10pt, minimum height=35pt] at (510pt,0pt) {18};
 
     %Q2
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-40pt) {\footnotesize{2º quad}};
+    height=10pt, rounded corners] at (-10pt,-\altura) {\footnotesize{2º quad}};
     
-    \disciplina [gray!60]{0*\sz}{-40pt}{a}{\tresc}{BCM0504-15\\Natureza da Informação\\(3-0-0-4)}
+    \disciplina [gray!60]{0*\sz}{-\altura}{a}{\tresc}{BCM0504-15\\Natureza da Informação\\(3-0-0-4)}
     
-    \disciplina [gray!60]{3*\sz}{-40pt}{a}{\cincc}{BCJ0204-15\\Fenômenos Mecânicos\\(4-1-0-6)}
+    \disciplina [gray!60]{3*\sz}{-\altura}{a}{\cincc}{BCJ0204-15\\Fenômenos Mecânicos\\(4-1-0-6)}
     
-    \disciplina [gray!60]{8*\sz}{-40pt}{a}{\quatc}{BCN0407-15\\Funções de uma Variável\\(4-0-0-6)}
+    \disciplina [gray!60]{8*\sz}{-\altura}{a}{\quatc}{BCN0407-15\\Funções de uma Variável\\(4-0-0-6)}
     
-    \disciplina [gray!60]{12*\sz}{-40pt}{a}{\tresc}{BCN0404-15\\Geometria Analítica\\(3-0-0-6)}
+    \disciplina [gray!60]{12*\sz}{-\altura}{a}{\tresc}{BCN0404-15\\Geometria Analítica\\(3-0-0-6)}
     
-    \disciplina [gray!60]{15*\sz}{-40pt}{a}{\tresc}{\scriptsize BCL0306-15\\Biodiversidade: Int. Organismos e Ambiente\\(3-0-0-4)}
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-40pt) {18 créditos};
+    \disciplina [gray!60]{15*\sz}{-\altura}{a}{\tresc}{\scriptsize BCL0306-15\\Biodiversidade: Int. Organismos e Ambiente\\(3-0-0-4)}
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-\altura) {18};
     
     
     %Q3
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-80pt) {\footnotesize{3º quad}};
+    height=10pt, rounded corners] at (-10pt,-2*\altura) {\footnotesize{3º quad}};
     
-    \disciplina [gray!60]{0*\sz}{-80pt}{a}{\quatc}{BCM0505-22\\Processamento da Informação\\(0-4-0-4)}
+    \disciplina [gray!60]{0*\sz}{-2*\altura}{a}{\quatc}{BCM0505-22\\Processamento da Informação\\(0-4-0-4)}
     
-    \disciplina [gray!60]{4*\sz}{-80pt}{a}{\cincc}{BCJ0205-22\\Fenômenos Térmicos\\(3-1-0-4)}
+    \disciplina [gray!60]{4*\sz}{-2*\altura}{a}{\cincc}{BCJ0205-22\\Fenômenos Térmicos\\(3-1-0-4)}
     
-    \disciplina [gray!60]{9*\sz}{-80pt}{a}{\quatc}{BCN0407-15\\Funções de Várias Variáveis\\(4-0-0-6)}
+    \disciplina [gray!60]{9*\sz}{-2*\altura}{a}{\quatc}{BCN0407-15\\Funções de Várias Variáveis\\(4-0-0-6)}
     
-    \disciplina [gray!60]{13*\sz}{-80pt}{a}{\cincc}{BCL0307-15 \\Transformações Químicas\\(3-2-0-6)}
+    \disciplina [gray!60]{13*\sz}{-2*\altura}{a}{\cincc}{BCL0307-15 \\Transformações Químicas\\(3-2-0-6)}
     
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-80pt) {18 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-2*\altura) {18};
 
     %Q4
     \node [draw, rotate=90, black,rectangle, minimum width=120pt, minimum
-    height=10pt, rounded corners] at (-25pt,-160pt) {\footnotesize{2º ANO}};
+    height=10pt, rounded corners] at (-25pt,-4*\altura) {\footnotesize{2º ANO}};
     
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-120pt) {\footnotesize{4º quad}};
-    
-    \disciplina [gray!60]{0*\sz}{-120pt}{a}{\tresc}{BCM0506-15\\Comunicação e Redes\\(3-0-0-4)}
-    
-    \disciplina [gray!60]{3*\sz}{-120pt}{a}{\cincc}{BCJ0203-15\\Fenômenos Eletromagnéticos\\(4-1-0-6)}
-    
-    \disciplina [gray!60]{8*\sz}{-120pt}{a}{\quatc}{BCN0405-15\\Introdução às Equações Diferencias Ordinárias\\(4-0-0-4)}
-    
-    \disciplina [gray!60]{12*\sz}{-120pt}{a}{\tresc}{\scriptsize BIN0406-15\\Introdução à Probabilidade e à Estatística\\(3-0-0-4)}
-    
-    \disciplina [nblue]{15*\sz}{-120pt}{a}{\quatc}{\hyperref[disc:mdI]{MCBM006-23\\Matemática Discreta}\\(4-0-0-4)}
+    height=10pt, rounded corners] at (-10pt,-3*\altura) {\footnotesize{4º quad}};
 
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-120pt) {19 créditos};
+    \disciplina [gray!60]{0*\sz}{-3*\altura}{a}{\tresc}{BCM0506-15\\Comunicação e Redes\\(3-0-0-4)}
+    
+    \disciplina [gray!60]{3*\sz}{-3*\altura}{a}{\cincc}{BCJ0203-15\\Fenômenos Eletromagnéticos\\(4-1-0-6)}
+    
+    \disciplina [gray!60]{8*\sz}{-3*\altura}{a}{\quatc}{BCN0405-15\\Introdução às Equações Diferencias Ordinárias\\(4-0-0-4)}
+    
+    \disciplina [gray!60]{12*\sz}{-3*\altura}{a}{\tresc}{\scriptsize BIN0406-15\\Introdução à Probabilidade e à Estatística\\(3-0-0-4)}
+    
+    \disciplina [nblue]{15*\sz}{-3*\altura}{a}{\quatc}{\hyperref[disc:mdI]{MCBM006-23\\Matemática Discreta}\\(4-0-0-4)}
+
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-3*\altura) {19};
     
     %Q5
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-160pt) {\footnotesize{5º quad}};
+    height=10pt, rounded corners] at (-10pt,-4*\altura) {\footnotesize{5º quad}};
     
-    \disciplina [gray!60]{0*\sz}{-160pt}{a}{\tresc}{Humanidades 2\\(3-0-0-4)}
+    \disciplina [gray!60]{0*\sz}{-4*\altura}{a}{\tresc}{Humanidades 2\\(3-0-0-4)}
     
-    \disciplina [gray!60]{3*\sz}{-160pt}{a}{\cincc}{\scriptsize BCL0308-15\\Bioquímica: Estrutura, Propriedade e Funções de Biomoléculas\\(3-2-0-6)}
+    \disciplina [gray!60]{3*\sz}{-4*\altura}{a}{\cincc}{\scriptsize BCL0308-15\\Bioquímica: Estrutura, Propriedade e Funções de Biomoléculas\\(3-2-0-6)}
     
-    \disciplina [gray!60]{8*\sz}{-160pt}{a}{\quatc}{BCK0103-22\\Física Quântica\\(3-0-0-4)}
+    \disciplina [gray!60]{8*\sz}{-4*\altura}{a}{\quatc}{BCK0103-22\\Física Quântica\\(3-0-0-4)}
     
-    \disciplina [nblue]{12*\sz}{-160pt}{a}{\quatc}{\hyperref[disc:pe]{MCTA028-15\\Programação Estruturada}\\(2-2-0-4)}
+    \disciplina [nblue]{12*\sz}{-4*\altura}{a}{\quatc}{\hyperref[disc:pe]{MCTA028-15\\Programação Estruturada}\\(2-2-0-4)}
 
-    \disciplina [nred]{16*\sz}{-1		60pt}{a}{\quatc}{Livre\\(4 créditos)}
+    \disciplina [nred]{16*\sz}{-4*\altura}{a}{\quatc}{Livre\\(4 créditos)}
     
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-160pt) {20 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-4*\altura) {20};
 
     %Q6
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-200pt) {\footnotesize{6º quad}};
+    height=10pt, rounded corners] at (-10pt,-5*\altura) {\footnotesize{6º quad}};
     
-    \disciplina [gray!60]{0*\sz}{-200pt}{a}{\tresc}{Humanidades 3\\(3-0-0-4)}
+    \disciplina [gray!60]{0*\sz}{-5*\altura}{a}{\tresc}{Humanidades 3\\(3-0-0-4)}
     
-    \disciplina [nblue]{3*\sz}{-200pt}{a}{\quatc}{\hyperref[disc:circ_dig]{MCTA006-17\\Circuitos Digitais}\\(3-1-0-4)}
+    \disciplina [nblue]{3*\sz}{-5*\altura}{a}{\quatc}{\hyperref[disc:circ_dig]{MCTA006-17\\Circuitos Digitais}\\(3-1-0-4)}
     
-    \disciplina [nblue]{7*\sz}{-200pt}{a}{\seisc}{\hyperref[disc:alge_lin]{MCTB001-17\\Álgebra Linear}\\(6-0-0-5)}
+    \disciplina [nblue]{7*\sz}{-5*\altura}{a}{\seisc}{\hyperref[disc:alge_lin]{MCTB001-17\\Álgebra Linear}\\(6-0-0-5)}
     
-    \disciplina [nblue]{13*\sz}{-200pt}{a}{\quatc}{\hyperref[disc:aedI]{MCCC001-23\\Algoritmos e Estruturas de Dados I}\\(2-2-0-6)}
+    \disciplina [nblue]{13*\sz}{-5*\altura}{a}{\quatc}{\hyperref[disc:aedI]{MCCC001-23\\Algoritmos e Estruturas de Dados I}\\(2-2-0-6)}
     
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-200pt) {17 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-5*\altura) {17};
 
     %Q7
     \node [draw, rotate=90, black,rectangle, minimum width=120pt, minimum
-    height=10pt, rounded corners] at (-25pt,-280pt) {\footnotesize{3º ANO}};
+    height=10pt, rounded corners] at (-25pt,-7*\altura) {\footnotesize{3º ANO}};
     
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-240pt) {\footnotesize{7º quad}};
+    height=10pt, rounded corners] at (-10pt,-6*\altura) {\footnotesize{7º quad}};
     
-    \disciplina [nblue]{0*\sz}{-240pt}{a}{\quatc}{\hyperref[disc:poo]{MCTA018-23\\Programação Orientada a Objetos}\\(2-2-0-4)}
+    \disciplina [nblue]{0*\sz}{-6*\altura}{a}{\quatc}{\hyperref[disc:poo]{MCTA018-23\\Programação Orientada a Objetos}\\(2-2-0-4)}
     
-    \disciplina [nblue]{4*\sz}{-240pt}{a}{\quatc}{\hyperref[disc:sist_dig]{MCTA024-23\\Sistemas Digitais}\\(2-2-0-4)}
+    \disciplina [nblue]{4*\sz}{-6*\altura}{a}{\quatc}{\hyperref[disc:sist_dig]{MCTA024-23\\Sistemas Digitais}\\(2-2-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-240pt}{a}{\quatc}{\hyperref[disc:mdII]{MCCC010-23\\Matemática Discreta II}\\(4-0-0-4)}
+    \disciplina [nblue]{8*\sz}{-6*\altura}{a}{\quatc}{\hyperref[disc:mdII]{MCCC010-23\\Matemática Discreta II}\\(4-0-0-4)}
     
-    \disciplina [nblue]{12*\sz}{-240pt}{a}{\quatc}{\hyperref[disc:aedII]{MCCC002-23\\Algoritmos e Estruturas de Dados II}\\(4-0-0-6)}
+    \disciplina [nblue]{12*\sz}{-6*\altura}{a}{\quatc}{\hyperref[disc:aedII]{MCCC002-23\\Algoritmos e Estruturas de Dados II}\\(4-0-0-6)}
     
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-240pt) {16 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-6*\altura) {16};
 
     %Q8
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-280pt) {\footnotesize{8º quad}};
+    height=10pt, rounded corners] at (-10pt,-7*\altura) {\footnotesize{8º quad}};
     
-    \disciplina [nyellow]{0*\sz}{-280pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
+    \disciplina [nyellow]{0*\sz}{-7*\altura}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-280pt}{a}{\quatc}{\hyperref[disc:arq]{MCTA004-23\\Arquitetura de Computadores}\\(4-0-0-4)}
+    \disciplina [nblue]{4*\sz}{-7*\altura}{a}{\quatc}{\hyperref[disc:arq]{MCTA004-23\\Arquitetura de Computadores}\\(4-0-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-280pt}{a}{\quatc}{\hyperref[disc:ia]{MCCC008-23\\Inteligência Artificial}\\(4-0-0-4)}
+    \disciplina [nblue]{8*\sz}{-7*\altura}{a}{\quatc}{\hyperref[disc:ia]{MCCC008-23\\Inteligência Artificial}\\(4-0-0-4)}
     
-    \disciplina [nblue]{12*\sz}{-280pt}{a}{\quatc}{\hyperref[disc:ag]{MCCC003-23\\Algoritmos em Grafos}\\(4-0-0-4)}
+    \disciplina [nblue]{12*\sz}{-7*\altura}{a}{\quatc}{\hyperref[disc:ag]{MCCC003-23\\Algoritmos em Grafos}\\(4-0-0-4)}
     
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-280pt) {16 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-7*\altura) {16};
     
     %Q9
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-320pt) {\footnotesize{9º quad}};
+    height=10pt, rounded corners] at (-10pt,-8*\altura) {\footnotesize{9º quad}};
     
-    \disciplina [nyellow]{0*\sz}{-320pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
+    \disciplina [nyellow]{0*\sz}{-8*\altura}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-320pt}{a}{\quatc}{\hyperref[disc:redes]{MCTA022-23\\Redes de Computadores}\\(3-1-0-4)}
+    \disciplina [nblue]{4*\sz}{-8*\altura}{a}{\quatc}{\hyperref[disc:redes]{MCTA022-23\\Redes de Computadores}\\(3-1-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-320pt}{a}{\quatc}{\hyperref[disc:es]{MCTA033-23\\Engenharia de Software}\\(4-0-0-4)}
+    \disciplina [nblue]{8*\sz}{-8*\altura}{a}{\quatc}{\hyperref[disc:es]{MCTA033-23\\Engenharia de Software}\\(4-0-0-4)}
     
-    \disciplina [nblue]{12*\sz}{-320pt}{a}{\quatc}{\hyperref[disc:aaI]{MCCC004-23\\Análise de Algoritmos I}\\(4-0-0-4)}
+    \disciplina [nblue]{12*\sz}{-8*\altura}{a}{\quatc}{\hyperref[disc:aaI]{MCCC004-23\\Análise de Algoritmos I}\\(4-0-0-4)}
 
-    \disciplina [gray!60]{16*\sz}{-320pt}{a}{\doisc}{BIS0002-15\\Projeto Dirigido\\(0-2-0-10)}
+    \disciplina [gray!60]{16*\sz}{-8*\altura}{a}{\doisc}{BIS0002-15\\Projeto Dirigido\\(0-2-0-10)}
 
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-320pt) {18 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-8*\altura) {18};
 
 
     %Q10
     \node [draw, rotate=90, black,rectangle, minimum width=120pt, minimum
-    height=10pt, rounded corners] at (-25pt,-400pt) {\footnotesize{4º ANO}};
+    height=10pt, rounded corners] at (-25pt,-10*\altura) {\footnotesize{4º ANO}};
     
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-360pt) {\footnotesize{10º quad}};
+    height=10pt, rounded corners] at (-10pt,-9*\altura) {\footnotesize{10º quad}};
     
-    \disciplina [nyellow]{0*\sz}{-360pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
+    \disciplina [nyellow]{0*\sz}{-9*\altura}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-360pt}{a}{\doisc}{\hyperref[disc:ces]{\scriptsize MCTA009-23\\Comp., Ética e Sociedade}\\(2-0-0-4)}
+    \disciplina [nblue]{4*\sz}{-9*\altura}{a}{\doisc}{\hyperref[disc:ces]{\scriptsize MCTA009-23\\Comp., Ética e Sociedade}\\(2-0-0-4)}
     
-    \disciplina [nblue]{6*\sz}{-360pt}{a}{\quatc}{\hyperref[disc:pf]{MCCC015-23\\Programação Funcional}\\(4-0-0-4)}
+    \disciplina [nblue]{6*\sz}{-9*\altura}{a}{\quatc}{\hyperref[disc:pf]{MCCC015-23\\Programação Funcional}\\(4-0-0-4)}
     
-    \disciplina [nblue]{10*\sz}{-360pt}{a}{\quatc}{\hyperref[disc:aaII]{MCCC005-23\\Análise de Algoritmos II}\\(4-0-0-4)}
+    \disciplina [nblue]{10*\sz}{-9*\altura}{a}{\quatc}{\hyperref[disc:aaII]{MCCC005-23\\Análise de Algoritmos II}\\(4-0-0-4)}
     
-    \disciplina [nred]{14*\sz}{-360pt}{a}{\quatc}{Livre\\(4 créditos)}
+    \disciplina [nred]{14*\sz}{-9*\altura}{a}{\quatc}{Livre\\(4 créditos)}
 
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-360pt) {18 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-9*\altura) {18};
 
     %Q11
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-400pt) {\footnotesize{11º quad}};
+    height=10pt, rounded corners] at (-10pt,-10*\altura) {\footnotesize{11º quad}};
     
-    \disciplina [nyellow]{0*\sz}{-400pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
+    \disciplina [nyellow]{0*\sz}{-10*\altura}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-400pt}{a}{\quatc}{\hyperref[disc:mbd]{MCCC012-23\\Modelagem de Banco de Dados}\\(4-0-0-4)}
+    \disciplina [nblue]{4*\sz}{-10*\altura}{a}{\quatc}{\hyperref[disc:mbd]{MCCC012-23\\Modelagem de Banco de Dados}\\(4-0-0-4)}
     
-    \disciplina [nblue]{8*\sz}{-400pt}{a}{\quatc}{\hyperref[disc:cg]{MCCC007-23\\Computação Gráfica}\\(0-4-0-4)}
+    \disciplina [nblue]{8*\sz}{-10*\altura}{a}{\quatc}{\hyperref[disc:cg]{MCCC007-23\\Computação Gráfica}\\(0-4-0-4)}
     
-    \disciplina [nblue]{12*\sz}{-400pt}{a}{\quatc}{\hyperref[disc:ol]{MCZA008-17\\Interação Humano-Computador}\\(4-0-0-4)}
+    \disciplina [nblue]{12*\sz}{-10*\altura}{a}{\quatc}{\hyperref[disc:ol]{MCZA008-17\\Interação Humano-Computador}\\(4-0-0-4)}
 
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-400pt) {16 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-10*\altura) {16};
 
     %Q12
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-440pt) {\footnotesize{12º quad}};
+    height=10pt, rounded corners] at (-10pt,-11*\altura) {\footnotesize{12º quad}};
     
-    \disciplina [nyellow]{0*\sz}{-440pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
+    \disciplina [nyellow]{0*\sz}{-11*\altura}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    \disciplina [nblue]{4*\sz}{-440pt}{a}{\doisc}{\scriptsize \hyperref[disc:metod]{MCCC011-23\\Metod.\ e Escr.\ Cient.\ para Comp.}\\(2-0-0-2)}
+    \disciplina [nblue]{4*\sz}{-11*\altura}{a}{\doisc}{\scriptsize \hyperref[disc:metod]{MCCC011-23\\Metod.\ e Escr.\ Cient.\ para Comp.}\\(2-0-0-2)}
     
-    \disciplina [nblue]{6*\sz}{-440pt}{a}{\quatc}{\hyperref[disc:so]{MCTA026-13\\Sistemas Operacionais}\\(3-1-0-4)}
+    \disciplina [nblue]{6*\sz}{-11*\altura}{a}{\quatc}{\hyperref[disc:so]{MCTA026-13\\Sistemas Operacionais}\\(3-1-0-4)}
     
-    \disciplina [nblue]{10*\sz}{-440pt}{a}{\quatc}{\hyperref[disc:lfa]{MCCC009-23\\Linguagens Formais e Autômatos}\\(4-0-0-4)}
+    \disciplina [nblue]{10*\sz}{-11*\altura}{a}{\quatc}{\hyperref[disc:lfa]{MCCC009-23\\Linguagens Formais e Autômatos}\\(4-0-0-4)}
     
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-440pt) {14 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-11*\altura) {14};
 
     %Q13
     \node [draw, rotate=90, black,rectangle, minimum width=120pt, minimum
-    height=10pt, rounded corners] at (-25pt,-520pt) {\footnotesize{5º ANO}};
+    height=10pt, rounded corners] at (-25pt,-13*\altura) {\footnotesize{5º ANO}};
     
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-480pt) {\footnotesize{13º quad}};
+    height=10pt, rounded corners] at (-10pt,-12*\altura) {\footnotesize{13º quad}};
     
-    \disciplina [nyellow]{0*\sz}{-480pt}{a}{\quatc}{Opção Limitada\\(4 créditos)}
+    \disciplina [nyellow]{0*\sz}{-12*\altura}{a}{\quatc}{Opção Limitada\\(4 créditos)}
     
-    %\disciplina [nblue]{4*\sz}{-480pt}{a}{\quatc}{Trabalho de Conclusão de Curso I\\(0-4-0-4)}
+    %\disciplina [nblue]{4*\sz}{-12*\altura}{a}{\quatc}{Trabalho de Conclusão de Curso I\\(0-4-0-4)}
     
-    \disciplina [nblue]{4*\sz}{-480pt}{a}{\quatc}{\hyperref[disc:compi]{MCCC006-23\\Compiladores e Interpretadores}\\(4-0-0-4)}
+    \disciplina [nblue]{4*\sz}{-12*\altura}{a}{\quatc}{\hyperref[disc:compi]{MCCC006-23\\Compiladores e Interpretadores}\\(4-0-0-4)}
 
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-480pt) {12 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-12*\altura) {8};
     
     
     %Q14
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-520pt) {\footnotesize{14º quad}};
+    height=10pt, rounded corners] at (-10pt,-13*\altura) {\footnotesize{14º quad}};
     
-    \disciplina [nred]{0*\sz}{-520pt}{a}{\quatc}{Livre\\(4 créditos)}
+    \disciplina [nred]{0*\sz}{-13*\altura}{a}{\quatc}{Livre\\(4 créditos)}
     
-    %\disciplina [nblue]{4*\sz}{-520pt}{a}{\quatc}{Trabalho de Conclusão de Curso II\\(0-4-0-6)}
+    %\disciplina [nblue]{4*\sz}{-13*\altura}{a}{\quatc}{Trabalho de Conclusão de Curso II\\(0-4-0-6)}
     
-    \disciplina [nblue]{4*\sz}{-520pt}{a}{\quatc}{\hyperref[disc:sist_distr]{MCTA025-23\\Sistemas Distribuídos}\\(3-1-0-4)}
+    \disciplina [nblue]{4*\sz}{-13*\altura}{a}{\quatc}{\hyperref[disc:sist_distr]{MCTA025-23\\Sistemas Distribuídos}\\(3-1-0-4)}
 
 
     
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-520pt) {12 créditos};
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-13*\altura) {8};
 
 
     %Q15
     \node [draw, rotate=90, black,rectangle, minimum width=40pt, minimum
-    height=10pt, rounded corners] at (-10pt,-560pt) {\footnotesize{15º quad}};
+    height=10pt, rounded corners] at (-10pt,-14*\altura) {\footnotesize{15º quad}};
     
-    \disciplina [nred]{0*\sz}{-560pt}{a}{\quatc}{Livre\\(4 créditos)}
+    \disciplina [nred]{0*\sz}{-14*\altura}{a}{\quatc}{Livre\\(4 créditos)}
 
     
-    \disciplina [nblue]{4*\sz}{-560pt}{a}{\quatc}{\hyperref[disc:seg]{MCTA023-23\\Segurança de Dados}\\(3-1-0-4)}
+    \disciplina [nblue]{4*\sz}{-14*\altura}{a}{\quatc}{\hyperref[disc:seg]{MCTA023-23\\Segurança de Dados}\\(3-1-0-4)}
 
-    \node [draw=black, fill=nblue, very thick, rectangle, rounded corners, inner sep=2pt, inner ysep=2pt, %
-    text width=\quatc, minimum height=120pt, text centered, anchor=west] (a) at ({8*\sz},{-520pt}) {
-      \begin{minipage}{\quatc pt}
-        \linespread{1.0}\selectfont
-        \centering
-        \footnotesize{Trabalho de Conclusão de Curso\\(12-0-0-12)}
-      \end{minipage}
-    };
+    \node [draw=black, fill=nblue!20,
+    dashed,
+    very thick, rectangle, rounded corners, inner sep=2pt, inner ysep=2pt, %
+    text width=0.98*\quatc, minimum height=2.8*\altura, text centered, anchor=west] (a) at ({8.05*\sz},{-13*\altura})
+    {};
+    % {  \begin{minipage}{\quatc pt}
+    %     \linespread{1.0}\selectfont
+    %     \centering
+    %     \footnotesize{TCC\\$\;$}
+    %   \end{minipage}
+    % };
 
-    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (470pt,-560pt) {12 créditos};
+    \disciplina [nblue]{8*\sz}{-14*\altura}{a}{\quatc}{\hyperref[disc:seg]{Trabalho de Conclusão de Curso\\(12-0-0-12)}};
+
+
+    \node [rectangle, minimum width=10pt, minimum   height=35pt] at (510pt,-14*\altura) {12};
 
     
-    \draw [red,thick,dashed] (20*\sz,20pt) -- (20*\sz,-580pt); 
-    \node [text=red] at (420pt,35pt) {20 créditos};
+    \draw [red,thick,dashed] (20*\sz,20pt) -- (20*\sz,-14.5*\altura); 
+    % \node [text=red] at (434pt,35pt) {20 créditos};
+    \node at (510pt,40pt) {\textbf{créditos}};
 
 
-    % Legenda
-    \node [text=black] at (-20pt, -620pt) {\textbf{Legenda:}};
-    \disciplina [gray!60]{15pt}{-620pt}{bis0505}{63}{Obrigatória BC\&T\\(T-P-E-I)}
+    % % Legenda
+    \node [text=black] at (-20pt, -15.5*\altura) {\textbf{Legenda:}};
+    \disciplina [gray!60]{20pt}{-15.5*\altura}{bis0505}{80}{Obrigatória BC\&T\\(T-P-E-I)}
     
-    \disciplina [nblue]{88pt}{-620pt}{bis0505}{63}{Obrigatória BCC\\(T-P-E-I)}
+    \disciplina [nblue]{110pt}{-15.5*\altura}{bis0505}{80}{Obrigatória BCC\\(T-P-E-I)}
     
-    \disciplina [nyellow]{161pt}{-620pt}{bis0505}{63}{Opção Limitada BCC\\(T-P-E-I)}
+    \disciplina [nyellow]{200pt}{-15.5*\altura}{bis0505}{80}{Opção Limitada BCC\\(T-P-E-I)}
     
-    \disciplina [nred]{234pt}{-620pt}{bis0505}{63}{Livre BCC\\(T-P-E-I)}
+    \disciplina [nred]{290pt}{-15.5*\altura}{bis0505}{80}{Livre BCC\\(T-P-E-I)}
     
     
 \end{tikzpicture}
