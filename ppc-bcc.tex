@@ -33,6 +33,7 @@
 \usepackage{enumitem}
 \usepackage{pdflscape}
 \usepackage{xspace}
+\usepackage{mathabx} % somente para o \Uparrow
 \usepackage[labelfont=bf,small,font=sl,justification=centering,skip=2pt]{caption}
 \captionsetup[table]{skip=2pt}
 
@@ -61,17 +62,35 @@
 \tikzset{seta/.style={decoration={markings,mark=at position 1 with %
     {\arrow[scale=3,>=stealth]{>}}},postaction={decorate}}}
 
+\def\altura{59pt}
+
 \newcommand{\disciplina}[6][yellow!20]{
 \node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
-sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=40pt,
+sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=\altura,
 text centered, anchor=west] (#4) at (#2,#3) {
    \begin{minipage}{#5pt}
    \linespread{1.0}\selectfont
        \centering
-       \footnotesize{#6}
+       % \footnotesize{#6}
+       \small{#6}
    \end{minipage}
 };
 }
+
+\newcommand{\disciplinaLeg}[6][yellow!20]{
+\node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
+sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=0.7*\altura,
+text centered, anchor=west] (#4) at (#2,#3) {
+   \begin{minipage}{#5pt}
+   \linespread{1.0}\selectfont
+       \centering
+       % \footnotesize{#6}
+       \small{#6}
+   \end{minipage}
+};
+}
+
+
 \newcommand{\disciplinab}[6][yellow!20]{
 \node [draw=black, fill=#1, very thick, rectangle, rounded corners, inner
 sep=2pt, inner ysep=2pt, text width=#5pt, minimum height=40pt,
