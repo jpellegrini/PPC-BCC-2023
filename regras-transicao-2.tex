@@ -1,0 +1,790 @@
+\documentclass[a4paper]{article}
+
+% Pacotes de formatação das fontes
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\setmainfont[
+    Path=fonts/,
+    BoldItalicFont=*-bold-italic-2.ttf,
+    BoldFont      =*-bold-2.ttf,
+    ItalicFont    =*-italic.ttf]{calibri.ttf}
+
+
+% Pacote para gerenciamento de espaçamentos
+\usepackage[left=30mm,right=30mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{indentfirst}
+\setlength{\parindent}{.5cm}
+\setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.5}
+
+% Outros pacotes
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{pdflscape}
+\usepackage[labelfont=bf,small,font=sl,justification=centering,skip=2pt]{caption}
+\captionsetup[table]{skip=2pt}
+
+% Gerenciamento dos hyperlinks
+\definecolor{dark-green}{HTML}{00781c}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  breaklinks=true,
+  linkcolor=dark-green,
+  citecolor=dark-green,
+  urlcolor=dark-green,
+  pdfsubject={Projeto Pedagógico BCC},
+  pdftitle={Projeto Pedagógico BCC}
+}
+\urlstyle{same}
+
+% Gerenciamento de figuras
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% Espaçamentos nas listas
+\setlist[itemize]{noitemsep,topsep=0pt}
+\setlist[enumerate]{noitemsep,topsep=0pt}
+
+% Paleta de cores daltônico-friendly
+\definecolor{nred}{rgb}{0.88, 0.28, 0.33}
+\definecolor{nblue}{rgb}{0.34, 0.74, 0.96}
+\definecolor{nyellow}{rgb}{0.8, 0.86, 0.38}
+\definecolor{npurple}{rgb}{0.25, 0.34, 0.93}
+\definecolor{ngreen}{rgb}{0.45, 0.95, 0.66}
+
+
+\usepackage{sectsty}
+\sectionfont{\MakeUppercase}
+\subsectionfont{\MakeUppercase} 
+
+\usepackage{tocloft}
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+
+\newcommand\T{\rule{0pt}{5.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+
+
+
+\begin{document}
+
+
+\begin{tabular}{rp{.5\textwidth}r}
+    \multirow{2}{*}{\includegraphics[scale=.03]{imagens/brasao.png}} & 
+    \centering \Large{Ministério da Educação} & \multirow{2}{*}{\includegraphics[scale=2.3]{imagens/ufabc-logo.png}} \\
+    & \centering \Large{Universidade Federal do ABC} &\\
+\end{tabular}
+
+\vspace{9cm}
+
+\begin{center}
+    \Large{REGRAS DE TRANSIÇÃO PARA O PROJETO PEDAGÓGICO 2023 DO \\BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}
+\end{center}
+
+\vspace{9cm}
+
+\begin{center}
+    SANTO ANDRÉ \\ 2023
+\end{center}
+
+\newpage
+
+\section{Regras de transição}
+\label{sec:regras_transicao}
+
+A matriz curricular de 2023 entrará em vigor assim que aprovada por
+todos os órgãos deliberativos de acordo com a Resolução ConsEPE nº 255
+de 22 de junho de 2022 e será plenamente oferecida para os
+ingressantes a partir do ano de 2023 na Universidade Federal do ABC.
+
+Os alunos que ingressaram na UFABC anteriormente a 2023 poderão integralizar o
+curso de acordo com a matriz curricular de 2023 ou de acordo com a matriz
+curricular do projeto pedagógico vigente no seu ano de ingresso.
+Caberá ao aluno realizar a análise da sua situação com relação ao coeficiente
+de progressão e decidir por qual matriz pretende obter o grau de bacharel em
+Ciência da Computação.
+Será necessário cumprir em sua totalidade uma das matrizes para ter direito à
+integralização do curso.
+
+Os ingressantes anteriores a 2023 que optem pela integralização de acordo com
+o PPC 2023 devem simplesmente cursar as disciplinas obrigatórias constantes na
+matriz de 2023.
+Todas as disciplinas já cursadas na matriz anterior serão convalidadas
+automaticamente, com exceção das seguintes:
+\begin{itemize}
+    \item A disciplina ``NHI2049-13 -- Lógica Básica'' será convalidada como de
+    opção livre;
+    \item A disciplina ``MCTA027-17 -- Teoria dos Grafos'' será convalidada
+    como ``MCCC003-23 -- Algoritmos em Grafos'';
+    \item As disciplinas de ``Estágio Supervisionado em Computação'' serão
+    convalidadas como de opção limitada. Essas disciplinas deixaram de ser
+    ofertadas em 2019 e estão extintas desde a matriz de 2017.
+\end{itemize}
+
+Os ingressantes anteriores a 2023 que optem pela integralização de acordo com o
+seu PPC de ingresso também devem simplesmente continuar cursando as disciplinas
+que serão ofertadas a partir de 2023, uma vez que todas as disciplinas
+obrigatórias dos PPCs anteriores permanecem obrigatórias no PPC de 2023, com as
+seguintes observações:
+\begin{itemize}
+    \item A disciplina ``MCCC015-23 -- Programação Funcional'' será convalidada
+    como ``MCTA016-13 -- Paradigmas de Programação'';
+    \item A disciplina ``MCCC003-23 -- Algoritmos em Grafos'' será convalidada
+    como ``MCTA027-17 -- Teoria dos Grafos'';
+    \item A disciplina ``MCCC010-23 -- Matemática Discreta II'' será
+    convalidada como ``NHI2049-13 -- Lógica Básica''.  Alternativamente, a
+    disciplina ``NHI2049-13 -- Lógica Básica'' pode ser cursada de acordo com
+    oferta pelo curso de Filosofia;
+    \item A disciplina ``MCCC011-23 -- Metodologia e Escrita Científica para
+    Computação'' será convalidada como opção livre.
+\end{itemize}
+Com relação às disciplinas de opção limitada, a convalidação é direta, exceto
+que ``MCZA036-17 -- Análise de Algoritmos II'' não convalida com
+``MCCC005-23 -- Análise de Algoritmos II''.
+%, com
+%observação para duas disciplinas que tiveram o nome modificado:
+%\begin{itemize}
+%    \item A disciplina ``MCZA036-17 -- Análise de Algoritmos II'' passou a se
+%    chamar ``MCCCXXX-23 -- Análise de Algoritmos III'';
+%    \item A disciplina ``MCZA014-17 -- Métodos de Otimização'' passou a se
+%    chamar ``MCCCXXX-23 -- Otimização Não-linear''.
+%\end{itemize}
+
+Detalhes das convalidações podem ser encontrados nas
+Tabelas~\ref{tab:convalidacoes_obrigatorias}
+e~\ref{tab:convalidacoes_limitadas}. Nessas tabelas, todas as
+convalidações são de mão dupla.
+%subseções \ref{subsec:convalidacoes_2017} (referência PPC 2017), 
+%\ref{subsec:convalidacoes_2015} (referência PPC 2015) e 
+%\ref{subsec:convalidacoes_2010} (referência PPC 2010).
+Os casos omissos serão resolvidos pela coordenação do curso, representada pelo
+seu coordenador, com o apoio da Pró-Reitoria de Graduação.
+
+
+\newpage
+
+\subsection{Tabelas de convalidações}
+\label{subsec:convalidacoes}
+
+\begin{landscape}
+{\footnotesize
+\begin{longtable}{|l|p{.15\textheight}|c|c||l|p{.15\textheight}|c|c||l|p{.15\textheight}|c|c||l|p{.15\textheight}|c|c|}
+    \caption{Tabela de convalidações das disciplinas.}
+    \label{tab:convalidacoes_obrigatorias} \\
+
+    \hline
+    \multicolumn{4}{|c||}{\bf 2010} &
+    \multicolumn{4}{|c|}{\bf 2015} &
+    \multicolumn{4}{|c||}{\bf 2017} &
+    \multicolumn{4}{|c|}{\bf 2023} \\ 
+    \hline
+    
+    \textbf{Sigla} & \textbf{Disciplina} & \textbf{Cr.} & \textbf{OB/OL} &
+    \textbf{Sigla} & \textbf{Disciplina} & \textbf{Cr.} & \textbf{OB/OL} &
+    \textbf{Sigla} & \textbf{Disciplina} & \textbf{Cr.} & \textbf{OB/OL} &
+    \textbf{Sigla} & \textbf{Disciplina} & \textbf{Cr.} & \textbf{OB/OL} \\
+    \hline\hline
+    
+    MCTB001-13 & Álgebra Linear & 6 & OB &
+    MCTB001-13 & Álgebra Linear & 6 & OB &
+    MCTB001-17 & Álgebra Linear & 6 & OB &
+    MCTB001-17 & Álgebra Linear & 6 & OB \\ \hline
+
+    MCTA001-13 & Algoritmos e Estruturas de Dados I & 4 & OB &
+    MCTA001-13 & Algoritmos e Estruturas de Dados I & 4 & OB &
+    MCTA001-17 & Algoritmos e Estruturas de Dados I & 4 & OB &
+    MCCC001-23 & Algoritmos e Estruturas de Dados I & 4 & OB  \\ \hline
+
+    MCTA002-13 & Algoritmos e Estruturas de Dados II & 4 & OB &
+    MCTA002-13 & Algoritmos e Estruturas de Dados II & 4 & OB & 
+    MCTA002-17 & Algoritmos e Estruturas de Dados II & 4 & OB & 
+    MCCC002-23 & Algoritmos e Estruturas de Dados II & 4 & OB  \\ \hline
+
+    & & & &
+    MCTA028-15 & Programação Estruturada & 4 & OB &
+    MCTA028-15 & Programação Estruturada & 4 & OB &
+    MCCC014-23 & Programação Estruturada & 4 & OB \\ \hline
+
+    MCTA002-13 & Algoritmos e Estruturas de Dados II & 4 & OB &
+    MCTA002-13 & Algoritmos e Estruturas de Dados II & 4 & OB &
+    MCTA002-17 & Algoritmos e Estruturas de Dados II & 4 & OB &
+    MCCC002-23 & Algoritmos e Estruturas de Dados II & 4 & OB \\ \hline
+
+    MCTA003-13 & Análise de Algoritmos   & 4 & OB &
+    MCTA003-13 & Análise de Algoritmos   & 4 & OB &
+    MCTA003-17 & Análise de Algoritmos   & 4 & OB &
+    MCCC004-23 & Análise de Algoritmos I & 4 & OB \\ \hline
+
+    & & & &
+    & & & & 
+    & & & &
+    MCCC005-23 & Análise de Algoritmos II & 4 & OB  \\ \hline
+
+    MCTA004-13 & Arquitetura de Computadores & 4 & OB &
+    MCTA004-13 & Arquitetura de Computadores & 4 & OB &
+    MCTA004-17 & Arquitetura de Computadores & 4 & OB &
+    MCTA004-17 & Arquitetura de Computadores & 4 & OB \\ \hline
+
+    MC3310 & Banco de Dados & 6 & OB &
+    MCTA032-15 & Banco de Dados & 4 & OB &
+    MCTA037-17 & Banco de Dados & 4 & OB &
+    MCCC012-23 & Modelagem de Banco de Dados & 4 & OB \\ \hline
+
+    MCTA006-13 & Circuitos Digitais & 4 & OB &
+    MCTA006-13 & Circuitos Digitais & 4 & OB &
+    MCTA006-17 & Circuitos Digitais & 4 & OB &
+    MCTA006-17 & Circuitos Digitais & 4 & OB \\ \hline
+
+    MCTA007-13 & Compiladores & 4 & OB &
+    MCTA007-13 & Compiladores & 4 & OB &
+    MCTA007-17 & Compiladores & 4 &  OB &
+    MCCC006-23 & Compiladores e Interpretadores & 4 & OB \\ \hline
+
+    MCTA008-13 & Computação Gráfica & 4 & OB &
+    MCTA008-13 & Computação Gráfica & 4 & OB &
+    MCTA008-17 & Computação Gráfica & 4 & OB &
+    MCCC007-23 & Computação Gráfica & 4 & OB \\ \hline
+
+    MCTA009-13 & Computadores, Ética e Sociedade & 2 & OB &
+    MCTA009-13 & Computadores, Ética e Sociedade & 2 & OB &
+    MCTA009-13 & Computadores, Ética e Sociedade & 2 & OB &
+    MCTA009-13 & Computadores, Ética e Sociedade & 2 & OB \\ \hline
+
+    MCTA010-13 & Engenharia de Software & 6 &  OB &
+    MCTA033-15 & Engenharia de Software & 4 &  OB &
+    MCTA033-15 & Engenharia de Software & 4 &  OB &
+    MCTA033-15 & Engenharia de Software & 4 &  OB \\ \hline
+
+    MCTA014-13 & Inteligência Artificial & 4 & OB &
+    MCTA014-15 & Inteligência Artificial & 4 & OB &
+    MCTA014-15 & Inteligência Artificial & 4 & OB &
+    MCCC008-23 & Inteligência Artificial & 4 & OB \\ \hline
+
+    MCZA008-13 & Interface Humano-Máquina    & 4 & OB &
+    MCZA008-15 & Interação Humano-Computador & 4 & OB &
+    MCZA008-17 & Interação Humano-Computador & 4 & OB &
+    MCZA008-17 & Interação Humano-Computador & 4 & OB \\ \hline
+
+
+    MCTA015-13 & Linguagens Formais e Automata  & 4 & OB &
+    MCTA015-13 & Linguagens Formais e Automata  & 4 & OB &
+    MCTA015-13 & Linguagens Formais e Automata  & 4 & OB &
+    MCCC009-23 & Linguagens Formais e Autômatos & 4 & OB\\ \hline
+
+    NHI2049-13 & Lógica Básica & 4 & OB &
+    NHI2049-13 & Lógica Básica & 4 & OB &
+    NHI2049-13 & Lógica Básica & 4 & OB &
+    NHI2049-13 & Lógica Básica & 4 & OB \\ \hline
+
+    & & & &
+    & & & &
+    & & & &
+    MCCC010-23 & ou Matemática Discreta II & 4 & OB\\ \hline
+
+    MCTX023-13 & Matemática Discreta & 4 & OB &
+    MCTB019-13 & Matemática Discreta & 4 & OB &
+    MCTB019-17 & Matemática Discreta & 4 & OB &
+    MCBM006-23 & Matemática Discreta & 4 & OB\\ \hline
+
+    MCTA016-13 & Paradigmas de Programação & 4 & OB &
+    MCTA016-13 & Paradigmas de Programação & 4 & OB &
+    MCTA016-13 & Paradigmas de Programação & 4 & OB &
+    MCCC015-23 & Programação Funcional     & 4 & OB\\ \hline
+
+    MCTA018-13 & Programação Orientada a Objetos & 4 & OB &
+    MCTA018-13 & Programação Orientada a Objetos & 4 & OB &
+    MCTA018-13 & Programação Orientada a Objetos & 4 & OB &
+    MCTA018-13 & Programação Orientada a Objetos & 4 & OB \\ \hline
+
+    MCTA019-13 & Projeto de Graduação em Computação I & 8 & OB &
+    MCTA019-13 & Projeto de Graduação em Computação I & 8 & OB &
+    MCTA029-17 & Projeto de Graduação em Computação I & 8 & OB &
+               & Créditos livres &  \\ \hline
+
+    MCTA020-13 & Projeto de Graduação em Computação II & 8 & OB &
+    MCTA020-13 & Projeto de Graduação em Computação II & 8 & OB &
+    MCTA030-17 & Projeto de Graduação em Computação II & 8 & OB &
+               & Créditos livres &  \\ \hline
+
+    MCTA021-13 & Projeto de Graduação em Computação III & 8 & OB &
+    MCTA021-13 & Projeto de Graduação em Computação III & 8 & OB &
+    MCTA031-17 & Projeto de Graduação em Computação III & 8 & OB &
+    MCCC017-23 & Trabalho de Conclusão de Curso em Computação & 12 & OB \\ \hline
+
+    MCTA022-13 & Redes de Computadores & 4 & OB & 
+    MCTA022-13 & Redes de Computadores & 4 & OB &
+    MCTA022-17 & Redes de Computadores & 4 & OB & 
+    MCTA022-17 & Redes de Computadores & 4 & OB \\ \hline
+
+    MCTA023-13 & Segurança de Dados & 4 & OB & 
+    MCTA023-13 & Segurança de Dados & 4 & OB & 
+    MCTA023-17 & Segurança de Dados & 4 & OB & 
+    MCTA023-17 & Segurança de Dados & 4 & OB \\ \hline
+
+    MCTA024-13 & Sistemas Digitais & 4 & OB &
+    MCTA024-13 & Sistemas Digitais & 4 & OB &
+    MCTA024-13 & Sistemas Digitais & 4 & OB &
+    MCTA024-13 & Sistemas Digitais & 4 & OB \\ \hline
+
+    MCTA025-13 & Sistemas Distribuídos & 4 & OB &
+    MCTA025-13 & Sistemas Distribuídos & 4 & OB &
+    MCTA025-13 & Sistemas Distribuídos & 4 & OB &
+    MCTA025-13 & Sistemas Distribuídos & 4 & OB\\ \hline
+
+    MCTA026-13 & Sistemas Operacionais & 4 & OB & 
+    MCTA026-13 & Sistemas Operacionais & 4 & OB & 
+    MCTA026-13 & Sistemas Operacionais & 4 & OB & 
+    MCTA026-13 & Sistemas Operacionais & 4 & OB \\ \hline
+
+    MCTA027-13 & Teoria dos Grafos & 4 & OB &
+    MCTA027-15 & Teoria dos Grafos & 4 & OB &
+    MCTA027-17 & Teoria dos Grafos & 4 & OB &
+    MCCC003-23 & Algoritmos em Grafos & 4 & OB\\ \hline
+
+    &  & & &
+    &  & & &
+    &  & & &
+    MCCC011-23 & Metodologia e Escrita Científica para Ciência da Computação & 2 & OB\\ \hline
+
+\end{longtable}
+}
+\end{landscape}
+
+
+\begin{landscape}
+{\footnotesize
+\begin{longtable}{|c|p{.2\textheight}|c||c|p{.2\textheight}|c||c|p{.2\textheight}|c||c|p{.2\textheight}|c|}
+    \caption{Tabela de convalidações das disciplinas limitadas.}
+    \label{tab:convalidacoes_limitadas} \\
+
+    \hline
+    \multicolumn{3}{|c||}{\bf 2010} & \multicolumn{3}{|c|}{\bf 2015} &
+    \multicolumn{3}{|c||}{\bf 2017} & \multicolumn{3}{|c|}{\bf 2023} \\ 
+    \hline
+    
+    \textbf{Sigla} & \textbf{Disciplina} & \textbf{Créd.} & \textbf{Sigla} & \textbf{Disciplina} & \textbf{Créd.} &
+    \textbf{Sigla} & \textbf{Disciplina} & \textbf{Créd.} & \textbf{Sigla} & \textbf{Disciplina} & \textbf{Créd.} \\
+    \hline\hline
+
+MCZA035-14 & Algoritmos Probabilísticos & 4 &
+MCZA035-14 & Algoritmos Probabilísticos & 4 &
+MCZA035-17 & Algoritmos Probabilísticos & 4 &
+MCZA035-17 & Algoritmos Probabilísticos & 4\\ \hline
+
+MCZA036-14 & Análise de Algoritmos II & 4 &
+MCZA036-14 & Análise de Algoritmos II & 4 &
+MCZA036-17 & Análise de Algoritmos II & 4 &
+           &                          &   \\ \hline
+%MCZA036-17 & Análise de Algoritmos II & 4\\ \hline
+
+
+MCZA001-13 & Análise de Projetos & 2 &
+MCZA001-13 & Análise de Projetos & 2 &
+MCZA001-13 & Análise de Projetos & 2 &
+MCZA001-13 & Análise de Projetos & 2\\ \hline
+
+MCTB007-13 & Anéis e Corpos & 4 &
+MCTB007-13 & Anéis e Corpos & 4 &
+MCTB007-17 & Anéis e Corpos & 4 &
+MCTB007-17 & Anéis e Corpos & 4\\ \hline
+
+MCZA002-13 & Aprendizado de Máquina & 4 &
+MCZA002-13 & Aprendizado de Máquina & 4 &
+MCZA002-17 & Aprendizado de Máquina & 4 &
+MCZA002-17 & Aprendizado de Máquina & 4\\ \hline
+
+MCZA003-13 & Arquitetura de Computadores de Alto Desempenho & 4 &
+MCZA003-13 & Arquitetura de Computadores de Alto Desempenho & 4 &
+MCZA003-17 & Arquitetura de Computadores de Alto Desempenho & 4 &
+MCZA003-17 & Arquitetura de Computadores de Alto Desempenho & 4\\ \hline
+
+MCZA004-13 & Avaliação de Desempenho de Redes & 4 &
+MCZA004-13 & Avaliação de Desempenho de Redes & 4 &
+MCZA004-13 & Avaliação de Desempenho de Redes & 4 &
+MCZA004-13 & Avaliação de Desempenho de Redes & 4\\ \hline
+
+MCZA005-13 & Banco de Dados de Apoio à Tomada de Decisão & 4 &
+MCZA005-13 & Banco de Dados de Apoio à Tomada de Decisão & 4 &
+MCZA005-17 & Banco de Dados de Apoio à Tomada de Decisão & 4 &
+MCZA005-17 & Banco de Dados de Apoio à Tomada de Decisão & 4\\ \hline
+
+MCTB009-13 & Cálculo Numérico & 4 &
+MCTB009-13 & Cálculo Numérico & 4 &
+MCTB009-17 & Cálculo Numérico & 4 &
+MCTB009-17 & Cálculo Numérico & 4\\ \hline
+
+MCZA037-14 & Combinatória Extremal & 4 &
+MCZA037-14 & Combinatória Extremal & 4 &
+MCZA037-17 & Combinatória Extremal & 4 &
+MCZA037-17 & Combinatória Extremal & 4\\ \hline
+
+MCZA006-13 & Computação Evolutiva e Conexionista & 4 &
+MCZA006-13 & Computação Evolutiva e Conexionista & 4 &
+MCZA006-17 & Computação Evolutiva e Conexionista & 4 &
+MCZA006-17 & Computação Evolutiva e Conexionista & 4\\ \hline
+
+& Não há & &
+& Não há & & 
+& Não há & & 
+MCZA053-22 & Desenvolvimento Guiado por Tipos & 4\\ \hline
+
+ESZG013-13 & Empreendedorismo & 4 &
+ESZG013-13 & Empreendedorismo & 4 &
+ESZG013-17 & Empreendedorismo & 4 &
+ESZG013-17 & Empreendedorismo & 4\\ \hline
+
+MCZA007-13 & Empreendedorismo e Desenvolvimento de Negócios & 4 &
+MCZA007-13 & Empreendedorismo e Desenvolvimento de Negócios & 4 &
+MCZA007-13 & Empreendedorismo e Desenvolvimento de Negócios & 4 &
+MCZA007-13 & Empreendedorismo e Desenvolvimento de Negócios & 4\\ \hline
+
+MCZA051-17 & Estágio Supervisionado em Computação & 4 &
+MCZA051-17 & Estágio Supervisionado em Computação & 4 &
+MCZA051-17 & Estágio Supervisionado em Computação & 4 &
+MCZA051-17 & Estágio Supervisionado em Computação & 4\\ \hline
+
+MCTA011-13 & Estágio Supervisionado em Computação I& 8 &
+MCZA034-15 & Estágio Supervisionado em Computação I & 3 &
+MCZA034-15 & Estágio Supervisionado em Computação I & 3 &
+MCZA051-17 & Estágio Supervisionado em Computação & 4\\ \hline
+
+MCTA012-13 & Estágio Supervisionado em Computação II& 8 &
+MCZA035-15 & Estágio Supervisionado em Computação II & 3 &
+MCZA035-15 & Estágio Supervisionado em Computação II & 3 &
+& Créditos livres & 3 \\ \hline
+
+MCTA013-13 & Estágio Supervisionado em Computação III& 8 &
+MCZA036-15 & Estágio Supervisionado em Computação III & 4 &
+MCZA036-15 & Estágio Supervisionado em Computação III & 4 &
+& Créditos livres & 4\\ \hline
+
+ESZI030-13 & Gerenciamento e Interoperabilidade de Redes & 4 &
+ESZI030-13 & Gerenciamento e Interoperabilidade de Redes & 4 &
+ESZI030-17 & Gerenciamento e Interoperabilidade de Redes & 4 & 
+ESZI030-17 & Gerenciamento e Interoperabilidade de Redes & 4\\ \hline
+
+MCZA016-13 & Organização de Projeto & 4 &
+MCZA016-13 & Organização de Projeto & 4 &
+MCZA016-17 & Gestão de projetos de software & 4 & 
+MCZA016-17 & Gestão de projetos de software & 4\\ \hline
+
+ESZG019-13 & Gestão Estratégica e Organizacional & 2 &
+ESZG019-13 & Gestão Estratégica e Organizacional & 2 &
+ESZG019-17 & Gestão Estratégica e Organizacional & 2 &
+ESZG019-17 & Gestão Estratégica e Organizacional & 2\\ \hline
+
+MCTB018-13 & Grupos & 4 &
+MCTB018-13 & Grupos & 4 &
+MCTB018-17 & Grupos & 4 &
+MCTB018-17 & Grupos & 4\\ \hline
+
+& Não há & &
+& Não há & & 
+& Não há & & 
+MCCC016-23 & Implementação em Sistemas Banco de Dados & 4\\ \hline
+
+MCZB012-13 & Inferência Estatística & 4 &
+MCZB012-13 & Inferência Estatística & 4 &
+MCZB012-13 & Inferência Estatística & 4 &
+MCZB012-13 & Inferência Estatística & 4\\ \hline
+
+ESZI013-13 & Informática Industrial & 4 &
+ESZI013-13 & Informática Industrial & 4 &
+ESZI013-17 & Informática Industrial & 4 & 
+ESZI013-17 & Informática Industrial & 4\\ \hline
+
+ESZB022-13 & Introdução à Bioinformática & 4 &
+ESZB022-13 & Introdução à Bioinformática & 4 &
+ESZB022-17 & Introdução à Bioinformática & 4 & 
+ESZB022-17 & Introdução à Bioinformática & 4\\ \hline
+
+MCZX012-13 & Introdução à Criptografia & 4 &
+MCZB015-13 & Introdução à Criptografia & 4 &
+MCZB015-13 & Introdução à Criptografia & 4 & 
+MCZB015-13 & Introdução à Criptografia & 4\\ \hline
+
+MCZB018-13 & Introdução à Modelagem e Processos Estocásticos & 4 &
+MCZB018-13 & Introdução à Modelagem e Processos Estocásticos & 4 &
+MCZB018-13 & Introdução à Modelagem e Processos Estocásticos & 4 &
+MCZB018-13 & Introdução à Modelagem e Processos Estocásticos & 4\\ \hline
+
+MCTC003-13 & Introdução à Neurociência Computacional & 4 &
+MCTC021-15 & Introdução à Neurociência Computacional & 4 &
+MCTC021-15 & Introdução à Neurociência Computacional & 4 & 
+MCTC021-20 & Neurociência Teórica e Computacional    & 4\\ \hline
+
+MCZA032-14 & Introdução à Programação de Jogos & 4 &
+MCZA032-14 & Introdução à Programação de Jogos & 4 &
+MCZA032-17 & Introdução à Programação de Jogos & 4 &
+MCZA032-17 & Introdução à Programação de Jogos & 4\\ \hline
+
+ESZI012-13 & Jogos Digitais: Aspectos Técnicos e Aplicações & 4 &
+ESZI012-13 & Jogos Digitais: Aspectos Técnicos e Aplicações & 4 &
+ESZI034-17 & Jogos Digitais: Aspectos Técnicos e Aplicações & 4 &
+ESZI034-17 & Jogos Digitais: Aspectos Técnicos e Aplicações & 4\\ \hline
+
+MCZA010-13 & Laboratório de Engenharia de Software & 6 &
+MCZA010-13 & Laboratório de Engenharia de Software & 4 &
+MCZA010-13 & Laboratório de Engenharia de Software & 4 &
+MCZA010-13 & Laboratório de Engenharia de Software & 4\\ \hline
+
+MCZA011-13 & Laboratório de Redes & 4 &
+MCZA011-13 & Laboratório de Redes & 4 &
+MCZA011-17 & Laboratório de Redes & 4 &
+MCZA011-17 & Laboratório de Redes & 4\\ \hline
+
+MCZA012-13 & Laboratório de Sistemas Operacionais & 4 &
+MCZA012-13 & Laboratório de Sistemas Operacionais & 4 &
+MCZA012-13 & Laboratório de Sistemas Operacionais & 4 & 
+MCZA012-13 & Laboratório de Sistemas Operacionais & 4\\ \hline
+
+MCZA013-13 & Lógicas não Clássicas & 4 &
+MCZA013-13 & Lógicas não Clássicas & 4 &
+MCZA013-13 & Lógicas não Clássicas & 4 &
+MCZA013-13 & Lógicas não Clássicas & 4\\ \hline
+
+MCZA014-13 & Métodos de Otimização & 4 &
+MCZA014-13 & Métodos de Otimização & 4 &
+MCZA014-17 & Métodos de Otimização & 4 &
+MCZA014-17 & Métodos de Otimização & 4 \\ \hline
+%MCCC???-23 & Otimização não-linear & 4\\ \hline
+
+MCZA015-13 & Mineração de Dados & 4 &
+MCZA015-13 & Mineração de Dados & 4 &
+MCZA015-13 & Mineração de Dados & 4 &
+MCZA015-13 & Mineração de Dados & 4\\ \hline
+
+MCTA017-13 & Programação Matemática & 4 &
+MCTA017-13 & Programação Matemática & 4 &
+MCTA017-17 & Programação Matemática & 4 &
+MCCC013-23 & Otimização Linear & 4 \\ \hline
+
+
+
+ESTG013-13 & Pesquisa Operacional & 6 &
+ESTG013-13 & Pesquisa Operacional & 6 &
+ESTG013-17 & Pesquisa Operacional & 6 &
+ESTG013-17 & Pesquisa Operacional & 6\\ \hline
+
+ESZI022-13 & Planejamento de Redes de Informação & 4 &
+ESZI022-13 & Planejamento de Redes de Informação & 4 &
+ESZI022-17 & Planejamento de Redes de Informação & 4 &
+ESZI022-17 & Planejamento de Redes de Informação & 4\\ \hline
+
+MCZA038-14 & Prática Avançada de Programação A & 4 &
+MCZA038-14 & Prática Avançada de Programação A & 4 &
+MCZA038-17 & Prática Avançada de Programação A & 4 &
+MCZA038-17 & Prática Avançada de Programação A & 4\\ \hline
+
+MCZA039-14 & Prática Avançada de Programação B & 4 &
+MCZA039-14 & Prática Avançada de Programação B & 4 &
+MCZA039-17 & Prática Avançada de Programação B & 4 & 
+MCZA039-17 & Prática Avançada de Programação B & 4\\ \hline
+
+MCZA040-14 & Prática Avançada de Programação C & 4 &
+MCZA040-14 & Prática Avançada de Programação C & 4 &
+MCZA040-17 & Prática Avançada de Programação C & 4 &
+MCZA040-17 & Prática Avançada de Programação C & 4\\ \hline
+
+MCZA041-14 & Processamento de Imagens Utilizando GPU & 4 &
+MCZA041-14 & Processamento de Imagens Utilizando GPU & 4 &
+MCZA041-17 & Processamento de Imagens Utilizando GPU & 4 & 
+MCZA041-17 & Processamento de Imagens Utilizando GPU & 4\\ \hline
+
+MCZA017-13 & Processamento de Linguagem Natural & 4 &
+MCZA017-13 & Processamento de Linguagem Natural & 4 &
+MCZA017-13 & Processamento de Linguagem Natural & 4 &
+MCZA017-13 & Processamento de Linguagem Natural & 4\\ \hline
+
+MCTC008-13 & Processamento de Sinais Neurais & 4 &
+MCTC022-15 & Processamento de Sinais Neurais & 4 &
+MCTC022-15 & Processamento de Sinais Neurais & 4 &
+MCTC022-15 & Processamento de Sinais Neurais & 4\\ \hline
+
+MCZX006-13 & Processamento Digital de Imagens & 4 &
+MCZX006-13 & Processamento Digital de Imagens & 4 &
+MCZA018-17 & Processamento Digital de Imagens & 4 &
+MCZA018-17 & Processamento Digital de Imagens & 4\\ \hline
+
+MCZA042-14 & Processo e Desenvolvimento de Softwares Educacionais & 4 &
+MCZA042-14 & Processo e Desenvolvimento de Softwares Educacionais & 4 &
+MCZA042-17 & Processo e Desenvolvimento de Softwares Educacionais & 4 & 
+MCZA042-17 & Processo e Desenvolvimento de Softwares Educacionais & 4\\ \hline
+
+MCZA033-14 & Programação Avançada para Dispositivos Móveis & 4 &
+MCZA033-14 & Programação Avançada para Dispositivos Móveis & 4 &
+MCZA033-17 & Programação Avançada para Dispositivos Móveis & 4 & 
+MCZA033-17 & Programação Avançada para Dispositivos Móveis & 4\\ \hline
+
+ESZI011-13 & Programação de Dispositivos Móveis & 2 &
+ESZI011-13 & Programação de Dispositivos Móveis & 2 &
+ESZI033-17 & Programação de Dispositivos Móveis & 2 &
+ESZI033-17 & Programação de Dispositivos Móveis & 2\\ \hline
+
+MCZA019-13 & Programação para Web & 4 &
+MCZA019-13 & Programação para Web & 4 &
+MCZA019-17 & Programação para Web & 4 &
+MCZA019-17 & Programação para Web & 4\\ \hline
+
+MCZA020-13 & Programação Paralela & 4 &
+MCZA020-13 & Programação Paralela & 4 &
+MCZA020-13 & Programação Paralela & 4 & 
+MCZA020-13 & Programação Paralela & 4\\ \hline
+
+MCZA034-14 & Programação Segura & 4 &
+MCZA034-14 & Programação Segura & 4 &
+MCZA034-17 & Programação Segura & 4 &
+MCZA034-17 & Programação Segura & 4\\ \hline
+
+& Não há & &
+& Não há & & 
+& Não há & & 
+MCZA054-22 & Projeto Avançado em Sistemas de Computação & 4\\ \hline
+
+MCZA021-13 & Projeto de Redes & 4 &
+MCZA021-13 & Projeto de Redes & 4 &
+MCZA021-17 & Projeto de Redes & 4 &
+MCZA021-17 & Projeto de Redes & 4\\ \hline
+
+MCZA022-13 & Projeto Interdisciplinar & 4 &
+MCZA022-13 & Projeto Interdisciplinar & 4 &
+MCZA022-17 & Projeto Interdisciplinar & 4 & 
+MCZA022-17 & Projeto Interdisciplinar & 4\\ \hline
+
+MCZA023-13 & Redes Convergentes & 4 &
+MCZA023-13 & Redes Convergentes & 4 &
+MCZA023-17 & Redes Convergentes & 4 &
+MCZA023-17 & Redes Convergentes & 4\\ \hline
+
+ESZI005-13 & Redes de Alta Velocidade & 4 &
+ESZI005-13 & Redes de Alta Velocidade & 4 &
+ESZI029-17 & Redes WAN de Banda Larga & 4 &
+ESZI029-17 & Redes WAN de Banda Larga & 4\\ \hline
+
+MCZA024-13 & Redes sem Fio & 4 &
+MCZA024-13 & Redes sem Fio & 4 &
+MCZA024-17 & Redes sem Fio & 4 &
+MCZA024-17 & Redes sem Fio & 4\\ \hline
+
+MCZA044-14 & Robótica e Sistemas Inteligentes & 4 &
+MCZA044-14 & Robótica e Sistemas Inteligentes & 4 &
+MCZA044-17 & Robótica e Sistemas Inteligentes & 4 &
+MCZA044-17 & Robótica e Sistemas Inteligentes & 4\\ \hline
+
+MCZA045-14 & Robótica Educacional & 4 &
+MCZA045-14 & Robótica Educacional & 4 &
+MCZA045-17 & Robótica Educacional & 4 &
+MCZA045-17 & Robótica Educacional & 4\\ \hline
+
+MCZA025-13 & Segurança em Redes & 4 &
+MCZA025-13 & Segurança em Redes & 4 &
+MCZA025-13 & Segurança em Redes & 4 & 
+MCZA025-13 & Segurança em Redes & 4\\ \hline
+
+MCZA046-14 & Semântica de Linguagem de Programação & 4 &
+MCZA046-14 & Semântica de Linguagem de Programação & 4 &
+MCZA046-17 & Semântica de Linguagem de Programação & 4 &
+MCZA046-17 & Semântica de Linguagem de Programação & 4\\ \hline
+
+MCZA026-13 & Sistemas de Gerenciamento de Banco de Dados & 4 &
+MCZA026-13 & Sistemas de Gerenciamento de Banco de Dados & 4 &
+MCZA026-17 & Sistemas de Gerenciamento de Banco de Dados & 4 & 
+MCZA026-17 & Sistemas de Gerenciamento de Banco de Dados & 4\\ \hline
+
+MCZA027-13 & Sistemas de Informação & 4 &
+MCZA027-13 & Sistemas de Informação & 4 &
+MCZA027-17 & Sistemas de Informação & 4 &
+MCZA027-17 & Sistemas de Informação & 4\\ \hline
+
+ESZI014-13 & Sistemas Inteligentes & 4 &
+ESZI014-13 & Sistemas Inteligentes & 4 &
+ESZI014-17 & Sistemas Inteligentes & 4 & 
+ESZI014-17 & Sistemas Inteligentes & 4\\ \hline
+
+MCZA028-13 & Sistemas Multiagentes & 4 &
+MCZA028-13 & Sistemas Multiagentes & 4 &
+MCZA028-13 & Sistemas Multiagentes & 4 &
+MCZA028-13 & Sistemas Multiagentes & 4\\ \hline
+
+MCZA029-13 & Sistemas Multimídia & 4 &
+MCZA029-13 & Sistemas Multimídia & 4 &
+MCZA029-13 & Sistemas Multimídia & 4 &
+MCZA029-13 & Sistemas Multimídia & 4\\ \hline
+
+MCZA047-14 & Sistemas Multi-Robôs Sociais & 4 &
+MCZA047-14 & Sistemas Multi-Robôs Sociais & 4 &
+MCZA047-17 & Sistemas Multi-Robôs Sociais & 4 &
+MCZA047-17 & Sistemas Multi-Robôs Sociais & 4\\ \hline
+
+MCZA050-15 & Técnicas Avançadas de Programação & 4 &
+MCZA050-15 & Técnicas Avançadas de Programação & 4 &
+MCZA050-17 & Técnicas Avançadas de Programação & 4 &
+MCZA050-17 & Técnicas Avançadas de Programação & 4\\ \hline
+
+NHZ5003-09 & Educação à Distância e Novas Tecnologias & 3 &
+NHZ5019-15 & Tecnologias da Informação e Comunicação na Educação & 3 &
+NHZ5019-15 & Tecnologias da Informação e Comunicação na Educação & 3 &
+NHZ5019-22 & Tecnologias da Informação e Comunicação na Educação & 3\\ \hline
+
+MCZB033-13 & Teoria da Recursão e Computabilidade & 4 &
+MCZB033-13 & Teoria da Recursão e Computabilidade & 4 &
+MCZB033-17 & Teoria da Recursão e Computabilidade & 4 &
+MCZB033-17 & Teoria da Recursão e Computabilidade & 4\\ \hline
+
+MCZA048-14 & Teoria Espectral de Grafos & 4 &
+MCZA048-14 & Teoria Espectral de Grafos & 4 &
+MCZA048-17 & Teoria Espectral de Grafos & 4 &
+MCZA048-17 & Teoria Espectral de Grafos & 4\\ \hline
+
+MCZA049-14 & Tópicos Emergentes em Banco de Dados & 4 &
+MCZA049-14 & Tópicos Emergentes em Banco de Dados & 4 &
+MCZA049-17 & Tópicos Emergentes em Banco de Dados & 4 &
+MCZA049-17 & Tópicos Emergentes em Banco de Dados & 4\\ \hline
+
+MCZA030-13 & Vida Artificial na Computação & 2 &
+MCZA030-13 & Vida Artificial na Computação & 2 &
+MCZA030-17 & Vida Artificial na Computação & 2 &
+MCZA030-17 & Vida Artificial na Computação & 2\\ \hline
+
+ESZA019-13 & Visão Computacional & 4 &
+ESZA019-13 & Visão Computacional & 4 &
+ESZA019-17 & Visão Computacional & 4 &
+ESZA019-17 & Visão Computacional & 4\\ \hline
+
+& Não há & &
+& Não há & & 
+& Não há & & 
+MCZA052-22 & Vizualização de Dados e Informações & 4\\ \hline
+
+MCZA031-13 & Web Semântica & 4 &
+MCZA031-13 & Web Semântica & 4 &
+MCZA031-13 & Web Semântica & 4 &
+MCZA031-13 & Web Semântica & 4\\ \hline
+    
+\end{longtable}
+}
+\end{landscape}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
