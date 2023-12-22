@@ -27,7 +27,7 @@ ppc: build_dir
 	$(call compile_full_tex,ppc-bcc)
 
 transicao: build_dir
-	$(call compile_tex,regras-transicao-2)
+	$(call compile_tex,regras-transicao)
 
 ol: build_dir
 	$(call compile_tex,ol)
